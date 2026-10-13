@@ -1,0 +1,9 @@
+analysis/
+node_modules/
+dist/
+build/
+target/
+.cache/
+__pycache__/
+*.log
+brand-review/
