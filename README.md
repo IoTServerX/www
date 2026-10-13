@@ -24,3 +24,8 @@ configuration only; its scripts do not execute yet.
 assets/configuration-1.1.0.jpg is a capture of the released 1.1.0 black-and-blue
 application UI, using local simulated data. It shows the channel/device tree,
 tag values and quality, and all six plugin branches.
+
+Social previews use assets/social-monogram-v1.png (1200 x 630), rendered from
+the matching SVG using the existing IS logo on a solid dark background. Open
+Graph and Twitter card metadata use its absolute public URL. The application
+screenshot remains in the landing page itself.
