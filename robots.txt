@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://iotserverx.github.io/www/sitemap.xml
+Sitemap: https://iotserverx.com/sitemap.xml

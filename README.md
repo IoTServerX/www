@@ -6,7 +6,7 @@ Windows downloads, and vector branding. The application source stays private.
 Download IoTServer from the [official releases repository](https://github.com/IoTServerX/releases/releases/latest).
 
 Published with GitHub Pages from the root of the main branch:
-https://iotserverx.github.io/www/
+https://iotserverx.com/
 
 The site is static HTML, CSS, and JavaScript; no package installation or build
 step is required. Preview locally with `python -m http.server 5193` and open
