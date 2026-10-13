@@ -3,13 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#102a32">
+  <meta name="theme-color" content="#0d1117">
   <meta name="description" content="IoT Server connects industrial devices through eight Rust adapters and exposes their data over OPC UA. Configure locally. Download for Windows.">
   <meta property="og:title" content="IoT Server — Your machines. One clear view.">
   <meta property="og:description" content="Eight industrial adapters, one OPC UA server, and a local browser interface. IoT Server 1.0.0 for Windows x64.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://iotserverx.github.io/www/">
-  <meta property="og:image" content="https://iotserverx.github.io/www/assets/dashboard.jpg">
+  <meta property="og:image" content="https://iotserverx.github.io/www/assets/configuration.jpg">
   <link rel="canonical" href="https://iotserverx.github.io/www/">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/favicon.ico" sizes="any">
@@ -39,11 +39,11 @@
         <div class="visual-grid" aria-hidden="true"></div>
         <div class="signal-label"><span class="status-dot"></span> FROM DEVICE TO DATA</div>
         <div class="product-window">
-          <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>IoT Server / Administration</span><span class="local-pill">LOCAL</span></div>
-          <button class="screenshot-button" id="enlarge-screen" aria-label="Enlarge the IoT Server interface screenshot"><img src="assets/dashboard.jpg" alt="IoT Server administration interface showing five demo devices running with five Good tags, runtime controls, and an event log." width="1280" height="720" fetchpriority="high"><span>Explore the interface <span aria-hidden="true">↗</span></span></button>
+          <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>IoT Server / Configuration</span><span class="local-pill">LOCAL</span></div>
+          <button class="screenshot-button" id="enlarge-screen" aria-label="Enlarge the IoT Server interface screenshot"><img src="assets/configuration.jpg" alt="IoT Server configuration view with five channels, six devices, and twelve live simulated tank tags showing names, addresses, values, and Good quality." width="1440" height="900" fetchpriority="high"><span>Explore the interface <span aria-hidden="true">↗</span></span></button>
         </div>
         <div class="data-route" aria-label="Device protocols feed the IoT Server OPC UA endpoint"><span>Ethernet / MQTT</span><span class="route-line" aria-hidden="true"></span><img src="assets/logo-mark.svg" alt="IoT Server" width="34" height="34"><span class="route-line" aria-hidden="true"></span><span>OPC UA</span></div>
-        <p class="screenshot-note">Actual interface · local demonstration</p>
+        <p class="screenshot-note">Actual interface · simulated process data</p>
       </div>
     </section>
     <div class="facts wrap"><div><strong>08</strong><span>driver adapters</span></div><div><strong>01</strong><span>OPC UA interface</span></div><div><span class="rust-symbol" aria-hidden="true">{ }</span><span>Rust at the core</span></div><div><span class="local-symbol" aria-hidden="true">⌘</span><span>Your data. Your machine.</span></div></div>
@@ -77,6 +77,6 @@
     <aside class="release-scope wrap"><strong>About this release</strong><p>Version 1.0.0 supports documented scalar subsets. Physical PLC interoperability and protocol certification remain unverified. Runs as a local interactive application, not a Windows service. MQTT TLS/authentication and memory persistence are pending. The Windows packages are unsigned. See the included documentation for supported models, addresses, and limits.</p></aside>
   </main>
   <footer class="footer wrap"><a href="#" class="brand"><img src="assets/logo-mark.svg" alt="" width="30" height="30"><span>IoT <strong>Server</strong><span class="brand-dot">.</span></span></a><span>Industrial data, connected.</span><div><a href="https://github.com/IoTServerX/releases">Releases <span aria-hidden="true">↗</span></a><a href="https://github.com/IoTServerX/www">Website source <span aria-hidden="true">↗</span></a></div></footer>
-  <dialog id="screen-dialog" aria-label="IoT Server interface screenshot"><button id="close-screen" aria-label="Close screenshot">Close <span aria-hidden="true">×</span></button><img src="assets/dashboard.jpg" alt="Full size IoT Server administration interface with five demo devices and five Good tags." width="1280" height="720"></dialog>
+  <dialog id="screen-dialog" aria-label="IoT Server interface screenshot"><button id="close-screen" aria-label="Close screenshot">Close <span aria-hidden="true">×</span></button><img src="assets/configuration.jpg" alt="Full size IoT Server configuration view with channel and device hierarchy, live process tags, values, and quality." width="1440" height="900"></dialog>
 </body>
 </html>
