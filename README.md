@@ -6,8 +6,9 @@ or package installation is needed. Application source remains private.
 
 Preview with `python -m http.server 5197 --bind 127.0.0.1` from this folder.
 
-The searchable catalog in catalog.js lists 71 driver families. app.js marks
-which 21 adapters ship in 1.3.0 and labels the remaining catalog as planned.
+The searchable catalog in catalog.js lists 71 driver families. Each card is
+non-interactive and shows only its number, name, and protocol/interface.
+Driver cards have no availability badge or detail modal.
 Seven plugin areas are shown; six ship with defined scopes, while Connection
 Sharing is planned. Plugin dialogs retain the release limitations, including
 Profile Library's configuration-only scope. Update these statuses together
