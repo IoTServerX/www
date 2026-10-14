@@ -4,9 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#0d1117">
-  <meta name="description" content="IoT Server connects industrial devices through eight Rust adapters and exposes their data over OPC UA. Configure locally. Download for Windows.">
-  <meta property="og:title" content="IoT Server — Your machines. One clear view.">
-  <meta property="og:description" content="Eight industrial adapters and one OPC UA server. Six plugin branches, configured alongside your devices and tags.">
+  <meta name="description" content="Industrial connectivity in one workspace. Explore 71 driver families and seven plugin areas, with release availability listed. Download IoT Server for Windows.">
+  <meta property="og:title" content="IoT Server — Every machine. One connection.">
+  <meta property="og:description" content="Explore our 71-driver catalog and seven plugin areas. Download IoT Server for Windows and see availability for each connection.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://iotserverx.com/">
   <meta property="og:site_name" content="IoT Server">
@@ -17,8 +17,8 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="IS monogram in white and blue on a dark background">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="IoT Server — Your machines. One clear view.">
-  <meta name="twitter:description" content="Eight industrial adapters and one OPC UA server. Six plugin branches, configured alongside your devices and tags.">
+  <meta name="twitter:title" content="IoT Server — Every machine. One connection.">
+  <meta name="twitter:description" content="Explore our 71-driver catalog and seven plugin areas. Download IoT Server for Windows and see availability for each connection.">
   <meta name="twitter:image" content="https://iotserverx.com/assets/social-monogram-v1.png">
   <meta name="twitter:image:alt" content="IS monogram in white and blue on a dark background">
   <link rel="canonical" href="https://iotserverx.com/">
@@ -26,82 +26,65 @@
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="style.css">
-  <script src="app.js" defer></script>
+  <link rel="stylesheet" href="style.css?v=20261013">
+  <script src="catalog.js?v=20261013" defer></script><script src="app.js?v=20261013" defer></script>
   <title>IoT Server — Industrial data, connected.</title>
 </head>
 <body>
+  <div class="release-bar"><span>IoT SERVER 1.2.0</span><a href="https://github.com/IoTServerX/releases/releases/tag/v1.2.0">Windows downloads available · See release notes ↗</a></div>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="header wrap">
-    <a href="#" class="brand" aria-label="IoT Server home"><img src="assets/logo-mark.svg" width="38" height="38" alt=""><span>IoT <strong>Server</strong><span class="brand-dot">.</span></span></a>
-    <nav aria-label="Main navigation"><a href="#platform">Platform</a><a href="#drivers">Drivers</a><a href="#plugins">Plugins</a><a href="https://github.com/IoTServerX/releases">GitHub <span aria-hidden="true">↗</span></a></nav>
-    <a class="button button-small button-dark" href="#download">Get IoT Server <span aria-hidden="true">↓</span></a>
+  <header class="site-header wrap">
+    <a class="brand" href="#"><img src="assets/logo-mark.svg" width="38" height="38" alt=""><span>IoT <b>Server</b><i>.</i></span></a>
+    <nav aria-label="Main navigation"><a href="#platform">Platform</a><a href="#plugins">Plugins</a><a href="#drivers">Driver library <span>71</span></a></nav>
+    <button class="small-cta" data-download>Get IoT Server <span>↗</span></button>
   </header>
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <a class="release-label" href="https://github.com/IoTServerX/releases/releases/tag/v1.2.0"><span class="status-dot"></span> VERSION 1.2.0 IS HERE <span aria-hidden="true">↗</span></a>
-        <h1 id="hero-title">Your machines.<br>One <span>clear view.</span></h1>
-        <p class="hero-description">Bring industrial data together. Connect your devices, configure your tags, and expose them through one OPC UA server.</p>
-        <div class="hero-actions"><a class="button button-dark" href="https://github.com/IoTServerX/releases/releases/download/v1.2.0/IoTServer-1.2.0-windows-x64-setup.exe"><svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path d="M1 3l8-1v7H1V3zm10-1.3L19 .5V9h-8V1.7zM1 11h8v7l-8-1v-6zm10 0h8v8.5l-8-1.2V11z"/></svg>Download for Windows <span aria-hidden="true">↓</span></a><a class="text-link" href="#platform">Take a closer look <span aria-hidden="true">↗</span></a></div>
-        <p class="micro">Windows x64 <span>·</span> Local administration <span>·</span> Built in Rust</p>
-      </div>
-      <div class="hero-visual">
-        <div class="visual-grid" aria-hidden="true"></div>
-        <div class="signal-label"><span class="status-dot"></span> FROM DEVICE TO DATA</div>
-        <div class="product-window">
-          <div class="window-bar"><span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>IoT Server / Configuration</span><span class="local-pill">LOCAL</span></div>
-          <button class="screenshot-button" id="enlarge-screen" aria-label="Enlarge the IoT Server interface screenshot"><img src="assets/configuration-1.2.0.jpg" alt="IoT Server 1.2.0 showing simulated process tags, a device right-click menu, and project and runtime controls in the main header." width="1600" height="1000" fetchpriority="high"><span>Explore the interface <span aria-hidden="true">↗</span></span></button>
+    <section class="hero wrap">
+      <div class="hero-intro"><div><p class="eyebrow">INDUSTRIAL CONNECTIVITY, IN YOUR CONTROL</p><h1>Every machine.<br><span>One connection.</span></h1><p class="hero-description">Bring your industrial world together. Connect devices, enrich their data, and put it to work—with one powerful server.</p></div><button class="cta-block" data-download><span>Get IoT Server</span><small>Built in Rust. Ready for Windows.</small><b aria-hidden="true">↗</b></button></div>
+      <div class="connection-visual" aria-label="Industrial connectivity diagram: devices and data sources connect through IoT Server to operations, applications, and enterprise data">
+        <div class="visual-top"><span><i class="signal"></i> FROM THE PLANT FLOOR TO YOUR APPLICATIONS</span><span>ONE CONNECTED SYSTEM</span></div>
+        <div class="network-scene">
+          <svg class="wires" aria-hidden="true"><defs><linearGradient id="wire" gradientUnits="userSpaceOnUse"><stop stop-color="#4973b3"/><stop offset=".5" stop-color="#8cbaff"/><stop offset="1" stop-color="#4973b3"/></linearGradient></defs><g class="wire-paths" fill="none" stroke="url(#wire)" stroke-width="1.5" stroke-linecap="round"></g></svg>
+          <div class="endpoints sources"><div><span class="line-icon">▥</span><p>PLCs & controllers<small>Allen-Bradley · Siemens · Omron</small></p></div><div><span class="line-icon">⌁</span><p>Process & field devices<small>Modbus · DNP · IEC · BACnet</small></p></div><div><span class="line-icon">▤</span><p>Data & connected systems<small>OPC UA · MQTT · ODBC</small></p></div></div>
+          <div class="server-core"><div class="core-caption">THE CONNECTIVITY LAYER</div><img src="assets/logo-mark.svg" alt="" width="66" height="66"><strong>IoT Server</strong><span class="core-status"><i class="signal"></i> CONNECTED BY DESIGN</span><div class="server-slots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+          <div class="endpoints destinations"><div><span class="endpoint-code">UA</span><p>Operations<small>HMI · SCADA · MES</small></p></div><div><span class="endpoint-code">↗</span><p>Connected applications<small>MQTT · cloud · analytics</small></p></div><div><span class="endpoint-code">▥</span><p>Enterprise data<small>Databases · history · reporting</small></p></div></div>
         </div>
-        <div class="data-route" aria-label="Device protocols feed the IoT Server OPC UA endpoint"><span>Ethernet / MQTT</span><span class="route-line" aria-hidden="true"></span><img src="assets/logo-mark.svg" alt="IoT Server" width="34" height="34"><span class="route-line" aria-hidden="true"></span><span>OPC UA</span></div>
-        <p class="screenshot-note">Version 1.2.0 · simulated process data</p>
+        <div class="visual-bottom"><p><strong>71</strong><span>driver families.<br>One growing catalog.</span></p><p><strong>07</strong><span>plugin areas.<br>More from every tag.</span></p><p><strong>01</strong><span>workspace.<br>Everything in context.</span></p><span class="visual-note">CONNECT → ENRICH → DELIVER</span></div>
       </div>
     </section>
-    <div class="facts wrap"><div><strong>08</strong><span>driver adapters</span></div><div><strong>01</strong><span>OPC UA interface</span></div><div><span class="rust-symbol" aria-hidden="true">{ }</span><span>Rust at the core</span></div><div><span class="local-symbol" aria-hidden="true">⌘</span><span>Your data. Your machine.</span></div></div>
-    <section class="platform wrap section" id="platform" aria-labelledby="platform-title">
-      <div class="section-heading"><p class="eyebrow">A SHORTER PATH TO YOUR DATA</p><h2 id="platform-title">Connect the floor.<br>Keep control at your desk.</h2></div>
-      <div class="workflow">
-        <article><span class="step">01 / CONNECT</span><div class="line-icon" aria-hidden="true">↳</div><h3>Speak your device’s language.</h3><p>Select a driver, add a device, and map its tags. Ethernet, OPC UA, MQTT, and memory adapters share one project.</p></article>
-        <article><span class="step">02 / CONFIGURE</span><div class="line-icon" aria-hidden="true">≡</div><h3>Make changes with context.</h3><p>Right-click channels, devices, tags, and plugin nodes for their actions. Validate, apply, and control the runtime from the main header.</p></article>
-        <article><span class="step">03 / EXPOSE</span><div class="line-icon" aria-hidden="true">↗</div><h3>Give applications a common view.</h3><p>Publish scalar values, quality, and timestamps through OPC UA. Read, subscribe, and use permitted writes with readback.</p></article>
-      </div>
+    <nav class="section-nav" aria-label="On this page"><div class="wrap"><a href="#platform" class="active">Core capabilities</a><a href="#plugins">Plugins <span>07</span></a><a href="#drivers">Driver library <span>71</span></a><a href="#workflow">How it works</a><a href="#get-started">Get started <span>↗</span></a></div></nav>
+    <section id="platform" class="section wrap">
+      <div class="section-heading"><p class="eyebrow">ONE PLATFORM. FROM CONNECTION TO CONTEXT.</p><h2>Make your data<br>work together.</h2></div>
+      <div class="capabilities"><div class="accordion">
+        <details name="capabilities" open><summary><span>01</span>Connect across your operation<i>+</i></summary><p>From a single controller to a mixed fleet of industrial equipment, bring connections into a consistent project. Explore 71 driver families, with released and planned availability listed below.</p></details>
+        <details name="capabilities"><summary><span>02</span>Give every value context<i>+</i></summary><p>Turn raw signals into useful information with calculated tags, condition monitoring, quality, and timestamps—ready for the applications that need them.</p></details>
+        <details name="capabilities"><summary><span>03</span>Keep configuration close<i>+</i></summary><p>Configure channels, devices, tags, and plugins in one local browser workspace. Right-click an object to work with it, then validate and apply your changes.</p></details>
+        <details name="capabilities"><summary><span>04</span>Deliver data where it matters<i>+</i></summary><p>Expose data over OPC UA, publish to MQTT, log to your database, and retain history. Build a connected flow from the plant floor to your software.</p></details>
+      </div><button class="product-preview" id="show-product"><div class="preview-label"><i class="signal"></i> YOUR OPERATION. ONE WORKSPACE.<span>↗</span></div><img src="assets/configuration-1.2.0.jpg" alt="IoT Server configuration workspace with channels, devices, live tags and a context menu"><div class="preview-caption"><strong>Built for the way you work.</strong><span>Explore the interface ↗</span></div></button></div>
     </section>
-    <section class="drivers-section" id="drivers" aria-labelledby="drivers-title"><div class="wrap drivers-layout">
-      <div><p class="eyebrow">THE CONNECTION LAYER</p><h2 id="drivers-title">Different protocols.<br>Shared visibility.</h2><p class="section-description">Eight adapters. One configuration workflow. Pick the connection that fits your device.</p><a class="text-link" href="https://github.com/IoTServerX/releases/releases/tag/v1.2.0">Read the release details <span aria-hidden="true">↗</span></a></div>
-      <div class="driver-list">
-        <div><span class="driver-number">01</span><h3>Allen-Bradley Ethernet</h3><span>PCCC / BCD / ARRAYS</span></div>
-        <div><span class="driver-number">02</span><h3>Modbus Ethernet</h3><span>TCP / UDP / MAILBOX</span></div>
-        <div><span class="driver-number">03</span><h3>OPC UA Client</h3><span>STRINGS / INT64 / UINT64</span></div>
-        <div><span class="driver-number">04</span><h3>ControlLogix Ethernet</h3><span>CIP / PCCC · 10 MODELS</span></div>
-        <div><span class="driver-number">05</span><h3>Mitsubishi Ethernet</h3><span>MC 1E / 3E · ARRAYS</span></div>
-        <div><span class="driver-number">06</span><h3>Siemens TCP/IP Ethernet</h3><span>S7COMM / BLOCK ARRAYS</span></div>
-        <div><span class="driver-number">07</span><h3>MQTT Client</h3><span>JSON / QOS 0, 1, 2</span></div>
-        <div><span class="driver-number">08</span><h3>Memory Based</h3><span>LOCAL / SHARED BANKS</span></div>
-      </div>
-    </div></section>
-    <section class="plugins-section wrap section" id="plugins" aria-labelledby="plugins-title">
-      <div class="plugins-heading"><div><p class="eyebrow">SIX PLUGINS · ONE CONFIGURATION TREE</p><h2 id="plugins-title">More from every tag.</h2></div><span class="preview-label">INCLUDED IN 1.2.0</span></div>
-      <p class="plugins-intro">Calculate values, evaluate conditions, log to a database, publish to MQTT, and keep local history. Plugin configuration lives alongside Connectivity in the project tree, with the same Validate, Apply, and Save workflow.</p>
-      <p class="preview-note">Included in the 1.2.0 installer and portable package. Each plugin has a defined scope; supported behavior and remaining work are listed below.</p>
+    <section id="plugins" class="plugin-section section"><div class="wrap">
+      <div class="section-heading heading-row"><div><p class="eyebrow">EXTEND YOUR CONNECTIVITY</p><h2>Seven plugin areas.<br>One data workflow.</h2></div><p>Calculate, monitor, publish, and retain.<br>Bring the tools your data needs into<br>the same place you manage your devices.</p></div><p class="availability-note">Version 1.2.0 includes six plugin areas with defined scopes. Connection Sharing is planned; explore each plugin for supported behavior.</p>
+      <article class="plugin-feature"><div><span class="plugin-symbol">ƒx</span><p class="eyebrow">01 / CALCULATE</p><h3>Advanced Tags</h3><p>Create meaningful values from raw signals. Build calculations, combine sources, and trigger processing when your operation changes.</p><button class="text-button" data-plugin="advanced_tags">Explore Advanced Tags <span>↗</span></button></div><div class="expression-card"><div><i class="signal"></i> EXPRESSION WORKSPACE <span>DERIVED TAG</span></div><code><b>Production.Efficiency</b><br><br><span>TAG</span>(Line.ActualOutput)<br>&nbsp; / <span>TAG</span>(Line.TargetOutput)<br>&nbsp; * <em>100</em></code><footer><span>OUTPUT / DOUBLE</span><strong>94.8 <small>%</small></strong></footer></div></article>
       <div class="plugin-grid">
-        <article><span class="step">01 / CALCULATE</span><h3>Advanced Tags</h3><p>Build numeric Derived Tags with arithmetic, source tag values, and quality expressions. Publish calculated outputs through OPC UA.</p><p class="plugin-scope">Fixed-rate or Good-quality rising-edge evaluation. Aggregate and string tag types are pending.</p></article>
-        <article><span class="step">02 / DETECT</span><h3>Alarms &amp; Events</h3><p>Organize areas, sources, and conditions that compare tags with constants or other tags. Track severity, quality, and state transitions in the local event log.</p><p class="plugin-scope">Local conditions only. Acknowledgement and OPC UA alarm/event transport are pending.</p></article>
-        <article><span class="step">03 / ORGANIZE</span><h3>Profile Library</h3><p>Store named scripts with stable identities. Load UTF-8 script text, edit profiles, and import or export their configuration as JSON.</p><p class="plugin-scope">Configuration storage is implemented. Script execution and device bindings are pending.</p></article>
-        <article><span class="step">04 / LOG</span><h3>DataLogger</h3><p>Write scalar values, quality, and timestamps to an existing table through a Windows ODBC DSN. Choose interval or change collection, source or collection timestamps, deadband, and persistent retries.</p><p class="plugin-scope">Fixed table layout; queues hold up to 1,000 samples. Delivery may duplicate records. Custom column mapping and triggers are pending.</p></article>
-        <article><span class="step">05 / PUBLISH</span><h3>IoT Gateway</h3><p>Publish tag samples as JSON over MQTT 3.1.1 with QoS 0, 1, or 2. Control initial and quality-change publication; durable queues retain pending samples across restarts.</p><p class="plugin-scope">Anonymous TCP; up to 1,000 queued samples. QoS 0 can lose messages and reconnect retries can duplicate delivery. TLS, authentication, REST, and custom payloads are pending.</p></article>
-        <article><span class="step">06 / RETAIN</span><h3>Local Historian</h3><p>Record values, quality, and timestamps with per-item collection intervals, deadband, and retention. Inspect recent samples in the configuration UI or query a time range through the local API.</p><p class="plugin-scope">Initial archive retains up to 1,000 samples per datastore. OPC UA HistoryRead and high-volume archives are pending.</p></article>
+        <article><span class="plugin-symbol">⌁</span><p class="eyebrow">02 / MONITOR</p><h3>Alarms & Events</h3><p>Watch conditions, track changes, and put important operational events in context.</p><button class="text-button" data-plugin="aeserver">Explore plugin <span>↗</span></button></article>
+        <article><span class="plugin-symbol">▤</span><p class="eyebrow">03 / RECORD</p><h3>DataLogger</h3><p>Move tag values, quality, and timestamps into your database for reporting and analysis.</p><button class="text-button" data-plugin="datalogger">Explore plugin <span>↗</span></button></article>
+        <article><span class="plugin-symbol">↗</span><p class="eyebrow">04 / PUBLISH</p><h3>IoT Gateway</h3><p>Connect industrial data to MQTT applications and build a dependable path to your cloud.</p><button class="text-button" data-plugin="iot_gateway">Explore plugin <span>↗</span></button></article>
+        <article><span class="plugin-symbol">◷</span><p class="eyebrow">05 / RETAIN</p><h3>Local Historian</h3><p>Keep a record of your process. Collect, retain, and explore the data behind every trend.</p><button class="text-button" data-plugin="local_historian">Explore plugin <span>↗</span></button></article>
+        <article><span class="plugin-symbol">{ }</span><p class="eyebrow">06 / STANDARDIZE</p><h3>Profile Library</h3><p>Organize reusable device profiles and scripts to bring consistency to your connections.</p><button class="text-button" data-plugin="profile_library">Explore plugin <span>↗</span></button></article>
+        <article><span class="plugin-symbol">⇄</span><p class="eyebrow">07 / SHARE</p><h3>Connection Sharing</h3><p>Coordinate shared communication resources and keep access to your devices organized.</p><button class="text-button" data-plugin="connection_sharing">Explore plugin <span>↗</span></button></article>
       </div>
-      <div class="plugin-workflow"><span>CONFIGURE IN THE TREE</span><p>Advanced Tags · DataLogger · IoT Gateway · Local Historian · Alarms &amp; Events · Profile Library</p><a class="text-link" href="https://github.com/IoTServerX/releases/releases/tag/v1.2.0">Read the release notes <span aria-hidden="true">↗</span></a></div>
-    </section>
-    <section class="details wrap section" aria-labelledby="details-title"><div class="section-heading"><p class="eyebrow">DESIGNED FOR VISIBLE OPERATION</p><h2 id="details-title">See the value.<br>Know the state.</h2></div><div class="details-list">
-      <article><span class="small-cross" aria-hidden="true">+</span><div><h3>Values with quality</h3><p>Distinguish live data from stale or unavailable values. Review device status and events alongside your configuration.</p></div></article>
-      <article><span class="small-cross" aria-hidden="true">+</span><div><h3>Explicit runtime controls</h3><p>Apply and save separately. Start or stop polling when you’re ready. Device and tag permissions govern writes.</p></div></article>
-      <article><span class="small-cross" aria-hidden="true">+</span><div><h3>Local by design</h3><p>Administration stays on your machine. Certificate trust is explicit, and saved upstream passwords use Windows user encryption.</p></div></article>
     </div></section>
-    <section class="download-section wrap" id="download" aria-labelledby="download-title"><div><p class="eyebrow">READY WHEN YOU ARE</p><h2 id="download-title">Put your data<br>within reach.</h2><p>IoT Server 1.2.0 for Windows x64.</p></div><div class="download-actions"><a class="button button-mint" href="https://github.com/IoTServerX/releases/releases/download/v1.2.0/IoTServer-1.2.0-windows-x64-setup.exe">Download installer <span aria-hidden="true">↓</span></a><a class="button button-outline" href="https://github.com/IoTServerX/releases/releases/download/v1.2.0/IoTServer-1.2.0-windows-x64-portable.zip">Get the portable ZIP <span aria-hidden="true">↗</span></a><a href="https://github.com/IoTServerX/releases/releases/download/v1.2.0/SHA256SUMS.txt">Verify SHA-256 checksums</a></div></section>
-    <aside class="release-scope wrap"><strong>About this release</strong><p>Version 1.2.0 adds contextual tree menus, triggered Derived Tags, tag-to-tag alarm comparisons, MQTT Gateway QoS 0/1/2, and more logging and historian controls. Physical PLC interoperability and protocol certification remain unverified. Runs as a local interactive application, not a Windows service. MQTT TLS/authentication and memory persistence are pending. The Windows packages are unsigned. See the included documentation for supported models, addresses, and limits.</p></aside>
+    <section id="drivers" class="section wrap">
+      <div class="section-heading heading-row"><div><p class="eyebrow">THE FULL DRIVER LIBRARY</p><h2>Your equipment.<br>Find your connection.</h2></div><p>71 driver families for the systems you rely on.<br>Explore released adapters and our roadmap,<br>from PLCs to enterprise data.</p></div>
+      <p class="availability-note">The 1.2.0 download includes eight adapters with documented protocol subsets. Other catalog entries are planned for future releases. Physical-hardware qualification is pending.</p><noscript><p>The searchable catalog requires JavaScript. <a href="https://github.com/IoTServerX/releases/releases/tag/v1.2.0">Read the release notes for the included adapters.</a></p></noscript><div class="catalog-toolbar"><label class="search-box"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg><input id="driver-search" type="search" placeholder="Find a driver, manufacturer, or protocol…" aria-label="Search drivers"><kbd>/</kbd></label><span id="driver-count" role="status" aria-live="polite">71 drivers</span></div>
+      <div id="driver-filters" class="filter-row" role="group" aria-label="Driver categories"><button class="active" data-filter="All drivers" aria-pressed="true">All drivers</button><button data-filter="PLCs & controllers" aria-pressed="false">PLCs & controllers</button><button data-filter="Process & energy" aria-pressed="false">Process & energy</button><button data-filter="Building & infrastructure" aria-pressed="false">Building & infrastructure</button><button data-filter="Data & enterprise" aria-pressed="false">Data & enterprise</button></div>
+      <div id="driver-grid" class="driver-grid"></div><div id="no-drivers" hidden><h3>No matching drivers</h3><p>Try a manufacturer name or choose another category.</p><button id="clear-search">Reset filters</button></div>
+      <div class="catalog-foot"><span><i class="signal"></i> 71 DRIVER FAMILIES · RELEASED + PLANNED</span><a href="#get-started">Explore the current release. <span>↗</span></a></div>
+    </section>
+    <section id="workflow" class="workflow-section section"><div class="wrap"><div class="section-heading"><p class="eyebrow">FROM FIRST CONNECTION TO LIVE DATA</p><h2>One familiar workflow.<br>Across every protocol.</h2></div><div class="steps"><article><span>01 / CONNECT</span><h3>Choose your driver.</h3><p>Add a channel, select your equipment, and configure its connection.</p></article><article><span>02 / CONFIGURE</span><h3>Make the data yours.</h3><p>Define tags, add plugins, and validate the complete project in one workspace.</p></article><article><span>03 / DELIVER</span><h3>Put it into motion.</h3><p>Apply your project and start the runtime. Your data is ready for your applications.</p></article></div></div></section>
+    <section id="get-started" class="download-section wrap"><div><p class="eyebrow">CONNECT WHAT COMES NEXT</p><h2>Your machines.<br>Your data. Your move.</h2><p>IoT Server 1.2.0 for Windows x64.</p></div><button class="cta-block" data-download><span>Get IoT Server</span><small>Windows x64 · Installer + portable ZIP</small><b aria-hidden="true">↗</b></button></section>
   </main>
-  <footer class="footer wrap"><a href="#" class="brand"><img src="assets/logo-mark.svg" alt="" width="30" height="30"><span>IoT <strong>Server</strong><span class="brand-dot">.</span></span></a><span>Industrial data, connected.</span><div><a href="https://github.com/IoTServerX/releases">Releases <span aria-hidden="true">↗</span></a><a href="https://github.com/IoTServerX/www">Website source <span aria-hidden="true">↗</span></a></div></footer>
-  <dialog id="screen-dialog" aria-label="IoT Server interface screenshot"><button id="close-screen" aria-label="Close screenshot">Close <span aria-hidden="true">×</span></button><img src="assets/configuration-1.2.0.jpg" alt="Full size IoT Server 1.2.0 interface with a device context menu, simulated tag values, and the main runtime controls." width="1600" height="1000"></dialog>
-</body>
-</html>
+  <footer class="site-footer wrap"><a class="brand" href="#"><img src="assets/logo-mark.svg" width="30" height="30" alt=""><span>IoT <b>Server</b><i>.</i></span></a><span>Industrial data, connected.</span><div><a href="#plugins">Plugins</a><a href="#drivers">Drivers</a><a href="https://github.com/IoTServerX/releases" target="_blank" rel="noreferrer">GitHub ↗</a></div><p>© 2026 IoT Server <span>Built in Rust · Windows x64</span></p></footer>
+  <dialog id="detail-dialog" aria-labelledby="detail-title"><button class="dialog-close" aria-label="Close details">×</button><p class="eyebrow" id="detail-category"></p><h2 id="detail-title"></h2><p id="detail-copy"></p><div id="detail-extra"></div><button class="small-cta dialog-done">Back to exploring <span>↗</span></button></dialog>
+  <dialog id="product-dialog" aria-label="IoT Server workspace"><button class="dialog-close" aria-label="Close screenshot">×</button><img src="assets/configuration-1.2.0.jpg" alt="IoT Server configuration interface at full size"></dialog>
+</body></html>

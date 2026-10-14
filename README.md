@@ -1,31 +1,27 @@
 # IoTServer website
 
-Public landing page for IoT Server, with product screenshots, adapter details,
-Windows downloads, and vector branding. The application source stays private.
+Public landing page at https://iotserverx.com/, published with GitHub Pages
+from the root of the main branch. Static HTML, CSS, and JavaScript; no build
+or package installation is needed. Application source remains private.
 
-Download IoTServer from the [official releases repository](https://github.com/IoTServerX/releases/releases/latest).
+Preview with `python -m http.server 5197 --bind 127.0.0.1` from this folder.
 
-Published with GitHub Pages from the root of the main branch:
-https://iotserverx.com/
+The searchable catalog in catalog.js lists 71 driver families. app.js marks
+which eight adapters ship in 1.2.0 and labels the remaining catalog as planned.
+Seven plugin areas are shown; six ship with defined scopes, while Connection
+Sharing is planned. Plugin dialogs retain the release limitations, including
+Profile Library's configuration-only scope. Update these statuses together
+with download links when publishing a new application release.
 
-The site is static HTML, CSS, and JavaScript; no package installation or build
-step is required. Preview locally with `python -m http.server 5193` and open
-http://127.0.0.1:5193/. The screenshot shows a local demonstration.
+Download links point to the 1.2.0 installer, portable ZIP, checksums, and release
+notes in https://github.com/IoTServerX/releases/releases/tag/v1.2.0.
 
-Brand assets are under `assets/`: SVG wordmark and symbol, SVG/ICO favicons,
-Apple touch icon, and 192/512 pixel application icons. Download links point
-to version 1.2.0 in the releases repository.
+The responsive connectivity diagram measures the six cards and server to draw
+its connectors. Its user-space SVG gradient supports horizontal paths.
 
-The landing page lists all six plugin areas with their implemented scope:
-Advanced Tags, Alarms & Events, Profile Library, DataLogger, IoT Gateway, and
-Local Historian. Their documented subsets ship in the 1.2.0 downloads. Profile Library stores
-configuration only; its scripts do not execute yet.
+Brand assets in assets/ include the IS monogram, wordmark, SVG/ICO favicons,
+Apple touch icon, app icons, and social preview. The upper-left and lower-right
+S corners use matching 10-unit radii. The social PNG is rendered from its SVG.
+assets/configuration-1.2.0.jpg shows the released UI with local simulated data.
 
-assets/configuration-1.2.0.jpg is a capture of the released 1.2.0 black-and-blue
-application UI, using local simulated data. It shows the channel/device tree,
-tag values and quality, the device context menu, and the main runtime controls.
-
-Social previews use assets/social-monogram-v1.png (1200 x 630), rendered from
-the matching SVG using the existing IS logo on a solid dark background. Open
-Graph and Twitter card metadata use its absolute public URL. The application
-screenshot remains in the landing page itself.
+The original design review lives in ignored brand-review/. It is not published.
