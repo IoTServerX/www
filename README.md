@@ -21,7 +21,9 @@ its connectors. Its user-space SVG gradient supports horizontal paths.
 
 Brand assets in assets/ include the IS monogram, wordmark, SVG/ICO favicons,
 Apple touch icon, app icons, and social preview. The upper-left and lower-right
-S corners use matching 10-unit radii. The social PNG is rendered from its SVG.
+S corners use matching 10-unit radii. The social preview uses social-monogram-v2.png (1200 × 630), rendered from
+its SVG, with the updated monogram above a separate IoT Server line. Open Graph
+and Twitter metadata use this versioned URL to refresh cached previews.
 assets/configuration-1.2.0.jpg shows the released UI with local simulated data.
 
 The original design review lives in ignored brand-review/. It is not published.
