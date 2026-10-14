@@ -7,14 +7,14 @@ or package installation is needed. Application source remains private.
 Preview with `python -m http.server 5197 --bind 127.0.0.1` from this folder.
 
 The searchable catalog in catalog.js lists 71 driver families. app.js marks
-which eight adapters ship in 1.2.0 and labels the remaining catalog as planned.
+which 21 adapters ship in 1.3.0 and labels the remaining catalog as planned.
 Seven plugin areas are shown; six ship with defined scopes, while Connection
 Sharing is planned. Plugin dialogs retain the release limitations, including
 Profile Library's configuration-only scope. Update these statuses together
 with download links when publishing a new application release.
 
-Download links point to the 1.2.0 installer, portable ZIP, checksums, and release
-notes in https://github.com/IoTServerX/releases/releases/tag/v1.2.0.
+Download links point to the 1.3.0 installer, portable ZIP, dependency notices, checksums, and release
+notes in https://github.com/IoTServerX/releases/releases/tag/v1.3.0.
 
 The responsive connectivity diagram measures the six cards and server to draw
 its connectors. Its user-space SVG gradient supports horizontal paths.
