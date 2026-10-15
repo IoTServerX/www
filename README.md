@@ -6,9 +6,24 @@ or package installation is needed. Application source remains private.
 
 Preview with `python -m http.server 5197 --bind 127.0.0.1` from this folder.
 
-The searchable catalog in catalog.js lists 71 driver families. Each card is
-non-interactive and shows only its number, name, and protocol/interface.
-Driver cards have no availability badge or detail modal.
+The searchable catalog in catalog.js lists 117 driver and source families:
+71 original catalog entries and 46 planned additions identified in the Litmus
+and DIME comparison. The additions cover network equipment, robotics, messaging,
+and data sources; serial, CAN/HID, Excel, OPC DA and output-only connectors are
+excluded. Existing catalog families are not duplicated for model variants.
+
+Each non-interactive card shows its number, name, and protocol/interface.
+The status field is implemented, skeleton, or planned. Skeletons and planned
+entries are gray, with a catalog legend and accessible status text; no detail
+modal or visible third description line is added. Six category filters include
+CNCs & robots and Motion & drives. Search/filter counts derive from the catalog.
+
+Original-driver status was checked against the Rust crate descriptors on
+2026-10-14: 47 entries have implementations and 24 are skeletons. This is a
+current-source inventory, not a claim that all implementations ship in the
+downloaded release or provide full protocol coverage. Refresh these statuses
+from crates/network-drivers/drivers.json and each crate's Implementation
+descriptor, including Memory Based, when the implementation inventory changes.
 Seven plugin areas are shown; six ship with defined scopes, while Connection
 Sharing is planned. Plugin dialogs retain the release limitations, including
 Profile Library's configuration-only scope. Update these statuses together

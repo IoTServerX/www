@@ -4,8 +4,8 @@ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'
 function renderDrivers(){
   const query=search.value.trim().toLowerCase();
   const shown=DRIVERS.filter(d=>(filter==='All drivers'||d.category===filter)&&[d.name,d.protocol,d.category].join(' ').toLowerCase().includes(query));
-  grid.innerHTML=shown.map(d=>'<div class="driver-card"><span>'+String(d.number).padStart(2,'0')+'</span><span><strong>'+esc(d.name)+'</strong><small>'+esc(d.protocol)+'</small></span></div>').join('');
-  document.querySelector('#driver-count').textContent=shown.length===DRIVERS.length?'71 drivers':shown.length+' of 71 drivers';
+  grid.innerHTML=shown.map(d=>'<div class="driver-card'+(d.status==='implemented'?'':' is-unavailable')+'" data-status="'+esc(d.status)+'"><span>'+String(d.number).padStart(2,'0')+'</span><span><strong>'+esc(d.name)+'</strong><small>'+esc(d.protocol)+'</small><span class="visually-hidden">'+(d.status==='skeleton'?'Not yet implemented.':d.status==='planned'?'Planned driver.':'Implementation available.')+'</span></span></div>').join('');
+  document.querySelector('#driver-count').textContent=shown.length===DRIVERS.length?DRIVERS.length+' drivers':shown.length+' of '+DRIVERS.length+' drivers';
   document.querySelector('#no-drivers').hidden=shown.length>0;
   grid.hidden=shown.length===0;
 }
