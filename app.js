@@ -12,16 +12,38 @@ function renderDrivers(){
 search.addEventListener('input',renderDrivers);
 document.querySelector('#driver-filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(el=>{el.classList.toggle('active',el===b);el.setAttribute('aria-pressed',String(el===b));});renderDrivers();});
 document.querySelector('#clear-search').addEventListener('click',()=>{search.value='';document.querySelector('[data-filter="All drivers"]').click();search.focus();});
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA/.test(e.target.tagName)&&!document.querySelector('dialog[open]')){e.preventDefault();search.focus();}});
-const dialog=document.querySelector('#detail-dialog');
-function showDetail(category,title,copy,extra){document.querySelector('#detail-category').textContent=category;document.querySelector('#detail-title').textContent=title;document.querySelector('#detail-copy').textContent=copy;document.querySelector('#detail-extra').innerHTML=extra;dialog.showModal();}
-const plugins={advanced_tags:['Advanced Tags','Create calculated values, combine source signals, and evaluate expressions on a schedule or trigger. Put meaningful process information alongside your raw device tags.'],aeserver:['Alarms & Events','Organize conditions into areas and sources. Monitor values, track state and quality, and surface meaningful operational events.'],datalogger:['DataLogger','Record values, quality, and timestamps in your database. Configure collection intervals and change conditions, then make the results available for reporting.'],iot_gateway:['IoT Gateway','Publish industrial tag data to connected MQTT applications. Choose delivery behavior, manage publication rules, and coordinate outgoing data.'],local_historian:['Local Historian','Collect process values over time. Set collection rates, retain samples, and inspect the history behind your equipment and operations.'],profile_library:['Profile Library','Organize reusable profiles and scripts with stable identities. Import, export, and manage connection behavior in a common library.'],connection_sharing:['Connection Sharing','Coordinate access to shared communication resources. Manage connections consistently as devices and applications share the same infrastructure.']};
-const PLUGIN_SCOPES={"Alarms & Events": ["Organize areas, sources, and conditions that compare tags with constants or other tags. Track severity, quality, and state transitions in the local event log.", "Local conditions only. Acknowledgement and OPC UA alarm/event transport are pending."], "Profile Library": ["Store named scripts with stable identities. Load UTF-8 script text, edit profiles, and import or export their configuration as JSON.", "Configuration storage is implemented. Script execution and device bindings are pending."], "DataLogger": ["Write scalar values, quality, and timestamps to an existing table through a Windows ODBC DSN. Choose interval or change collection, source or collection timestamps, deadband, and persistent retries.", "Fixed table layout; queues hold up to 1,000 samples. Delivery may duplicate records. Custom column mapping and triggers are pending."], "IoT Gateway": ["Publish tag samples as JSON over MQTT 3.1.1 with QoS 0, 1, or 2. Control initial and quality-change publication; durable queues retain pending samples across restarts.", "Anonymous TCP; up to 1,000 queued samples. QoS 0 can lose messages and reconnect retries can duplicate delivery. TLS, authentication, REST, and custom payloads are pending."], "Local Historian": ["Record values, quality, and timestamps with per-item collection intervals, deadband, and retention. Inspect recent samples in the configuration UI or query a time range through the local API.", "Initial archive retains up to 1,000 samples per datastore. OPC UA HistoryRead and high-volume archives are pending."], "Advanced Tags": ["Build numeric Derived Tags with arithmetic, source tag values, and quality expressions. Publish calculated outputs through OPC UA.", "Fixed-rate or Good-quality rising-edge evaluation. Aggregate and string tag types are pending."]};
-document.querySelectorAll('[data-plugin]').forEach(b=>b.addEventListener('click',()=>{const [title,copy]=plugins[b.dataset.plugin];const scope=PLUGIN_SCOPES[title];showDetail(scope?'IN 1.3.0 · DEFINED SCOPE':'PLANNED PLUGIN',title,scope?scope[0]:copy,scope?esc(scope[1]):'Connection Sharing is planned and is not included in the current release.');}));
-document.querySelectorAll('[data-download]').forEach(b=>b.addEventListener('click',()=>showDetail('WINDOWS X64 · VERSION 1.3.0','Get IoT Server.','21 driver adapters and six plugin areas with documented scopes. Choose the installer or portable package.','<div class="download-links"><a class="small-cta" href="https://github.com/IoTServerX/releases/releases/download/v1.3.0/IoTServer-1.3.0-windows-x64-setup.exe">Download installer <span>↓</span></a><a class="small-cta" href="https://github.com/IoTServerX/releases/releases/download/v1.3.0/IoTServer-1.3.0-windows-x64-portable.zip">Download portable ZIP <span>↓</span></a><a href="https://github.com/IoTServerX/releases/releases/download/v1.3.0/IoTServer-1.3.0-third-party-notices.zip">Third-party notices and sources</a><a href="https://github.com/IoTServerX/releases/releases/download/v1.3.0/SHA256SUMS.txt">Verify SHA-256 checksums</a><a href="https://github.com/IoTServerX/releases/releases/tag/v1.3.0" target="_blank" rel="noreferrer">Release notes and supported scope ↗</a></div>')));
-document.querySelector('#show-product').addEventListener('click',()=>document.querySelector('#product-dialog').showModal());
-document.querySelectorAll('.dialog-close,.dialog-done').forEach(b=>b.addEventListener('click',()=>b.closest('dialog').close()));
-document.querySelectorAll('dialog').forEach(d=>d.addEventListener('click',e=>{if(e.target!==d)return;const r=d.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)d.close();}));
+document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA/.test(e.target.tagName)){e.preventDefault();search.focus();}});
+document.querySelectorAll('[data-driver-total]').forEach(el=>{el.textContent=DRIVERS.length;});
+
+// Versioned asset names come from the release, never from a version in this site.
+// If discovery is unavailable, ordinary anchors still open GitHub's latest release.
+function releaseAssetUrl(asset){
+  try{
+    const url=new URL(asset.browser_download_url);
+    return url.protocol==='https:'&&url.hostname==='github.com'&&!url.username&&!url.password&&url.pathname.startsWith('/IoTServerX/releases/releases/download/')&&decodeURIComponent(url.pathname.split('/').pop())===asset.name?url.href:null;
+  }catch{return null;}
+}
+async function resolveLatestDownloads(){
+  const controller=new AbortController(),timeout=setTimeout(()=>controller.abort(),7000);
+  try{
+    const response=await fetch('https://api.github.com/repos/IoTServerX/releases/releases/latest',{headers:{Accept:'application/vnd.github+json'},cache:'no-store',signal:controller.signal});
+    if(!response.ok)return;
+    const release=await response.json();
+    if(release.draft||release.prerelease||!Array.isArray(release.assets))return;
+    const installer=release.assets.find(a=>typeof a?.name==='string'&&/^IoTServer(?:-[\w.+-]+)?-windows-x64-setup\.exe$/i.test(a.name));
+    const portable=release.assets.find(a=>typeof a?.name==='string'&&/^IoTServer(?:-[\w.+-]+)?-windows-x64-portable\.zip$/i.test(a.name));
+    if(!installer||!portable)return;
+    const installerUrl=releaseAssetUrl(installer),portableUrl=releaseAssetUrl(portable);
+    if(!installerUrl||!portableUrl)return;
+    document.querySelector('#download-installer').href=installerUrl;
+    document.querySelector('#download-portable').href=portableUrl;
+    const version=typeof release.tag_name==='string'&&release.tag_name.length<100?release.tag_name+' · ':'';
+    document.querySelector('#release-label').textContent='Latest release · '+version+'Windows x64';
+  }catch{
+    // No stale pinned package or popup: both links keep their latest-release fallback.
+  }finally{clearTimeout(timeout);}
+}
+void resolveLatestDownloads();
 const sections=[...document.querySelectorAll('main>section[id]')],navLinks=[...document.querySelectorAll('.section-nav a')];
 function updateNav(){let id='platform';for(const s of sections)if(s.getBoundingClientRect().top<150)id=s.id;navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}
 document.addEventListener('scroll',updateNav,{passive:true});renderDrivers();
