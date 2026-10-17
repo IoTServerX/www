@@ -37,8 +37,6 @@ async function resolveLatestDownloads(){
     if(!installerUrl||!portableUrl)return;
     document.querySelector('#download-installer').href=installerUrl;
     document.querySelector('#download-portable').href=portableUrl;
-    const version=typeof release.tag_name==='string'&&release.tag_name.length<100?release.tag_name+' · ':'';
-    document.querySelector('#release-label').textContent='Latest release · '+version+'Windows x64';
   }catch{
     // No stale pinned package or popup: both links keep their latest-release fallback.
   }finally{clearTimeout(timeout);}
