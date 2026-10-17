@@ -49,7 +49,10 @@ motor Simulation example. Preview data is explicitly marked offline/simulated;
 it is not physical-hardware or delivery evidence. The MCP image is the real
 configuration screen, not a fabricated agent conversation. Only the local-path
 status bar was excluded from the captures; application pixels were not retouched.
-Images load lazily, preserve their aspect ratio and link to their full-size files.
+Images load lazily and preserve their aspect ratio. Images and Full size links
+open a shared accessible lightbox; close it with its button, Escape, or the backdrop.
+The native dialog traps focus, restores the opener, and prevents background scrolling.
+Without JavaScript, the links navigate directly to the image in the same tab.
 Replace captures with new real screenshots when the UI changes.
 The old UI photographs remain in assets for provenance but are not displayed.
 Brand assets and the updated IS monogram/social preview are unchanged.

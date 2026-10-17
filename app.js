@@ -12,7 +12,7 @@ function renderDrivers(){
 search.addEventListener('input',renderDrivers);
 document.querySelector('#driver-filters').addEventListener('click',e=>{const b=e.target.closest('[data-filter]');if(!b)return;filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(el=>{el.classList.toggle('active',el===b);el.setAttribute('aria-pressed',String(el===b));});renderDrivers();});
 document.querySelector('#clear-search').addEventListener('click',()=>{search.value='';document.querySelector('[data-filter="All drivers"]').click();search.focus();});
-document.addEventListener('keydown',e=>{if(e.key==='/'&&!/INPUT|TEXTAREA/.test(e.target.tagName)){e.preventDefault();search.focus();}});
+document.addEventListener('keydown',e=>{if(!document.querySelector('#screenshot-lightbox').open&&e.key==='/'&&!/INPUT|TEXTAREA/.test(e.target.tagName)){e.preventDefault();search.focus();}});
 document.querySelectorAll('[data-driver-total]').forEach(el=>{el.textContent=DRIVERS.length;});
 
 // Versioned asset names come from the release, never from a version in this site.
@@ -78,3 +78,28 @@ const connectionObserver=new ResizeObserver(drawConnections);
 connectionObserver.observe(scene);
 scene.querySelectorAll('.endpoints>div,.server-core').forEach(el=>connectionObserver.observe(el));
 drawConnections();
+
+// Native modal dialog keeps focus inside the lightbox and restores it on close.
+const lightbox=document.querySelector('#screenshot-lightbox');
+const lightboxImage=lightbox.querySelector('img');
+document.querySelectorAll('.product-shot a').forEach(link=>{
+  link.addEventListener('click',event=>{
+    if(event.button!==0||event.ctrlKey||event.metaKey||event.shiftKey||event.altKey)return;
+    event.preventDefault();
+    const figure=link.closest('.product-shot');
+    lightboxImage.src=link.href;
+    lightboxImage.alt=figure.querySelector('img').alt;
+    document.querySelector('#lightbox-title').textContent=figure.querySelector('figcaption span').textContent;
+    lightbox.showModal();
+    document.documentElement.classList.add('lightbox-open');
+  });
+});
+lightbox.querySelector('button').addEventListener('click',()=>lightbox.close());
+lightbox.addEventListener('click',event=>{
+  const rect=lightbox.getBoundingClientRect();
+  if(event.target===lightbox&&(event.clientX<rect.left||event.clientX>rect.right||event.clientY<rect.top||event.clientY>rect.bottom))lightbox.close();
+});
+lightbox.addEventListener('close',()=>{
+  document.documentElement.classList.remove('lightbox-open');
+  lightboxImage.removeAttribute('src');
+});
