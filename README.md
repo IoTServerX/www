@@ -38,14 +38,20 @@ ordinary release/version bump. No privileged API token is used or shipped.
 
 ## Screenshots and branding
 
-Four labeled, noninteractive screenshot-placeholder figures reserve space for:
-- the workspace (namespace, connections and properties);
-- the visual mapper;
-- simulation and preview;
-- the agent-assisted engineering workflow.
+Four actual application screenshots in assets/screenshots/ replace the placeholders:
+- connected-workspace.jpg: connections, map inputs, Lua, routing, and properties;
+- mapping-bindings.jpg: selected Lua field assignment and its declaration;
+- simulation-preview.jpg: offline motor calculations and prospective records;
+- mcp-agent-access.jpg: Administration > MCP Server connection configuration.
 
-Replace those figures with actual captures from the latest build when ready.
-The old UI photographs remain in assets for provenance, but none are displayed.
+Each 1280 by 690 JPEG was captured through the running application's UI using the
+motor Simulation example. Preview data is explicitly marked offline/simulated;
+it is not physical-hardware or delivery evidence. The MCP image is the real
+configuration screen, not a fabricated agent conversation. Only the local-path
+status bar was excluded from the captures; application pixels were not retouched.
+Images load lazily, preserve their aspect ratio and link to their full-size files.
+Replace captures with new real screenshots when the UI changes.
+The old UI photographs remain in assets for provenance but are not displayed.
 Brand assets and the updated IS monogram/social preview are unchanged.
 
 The responsive connectivity diagram measures the six cards and server to draw
