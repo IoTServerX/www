@@ -42,13 +42,15 @@ Four actual application screenshots in assets/screenshots/ replace the placehold
 - connected-workspace.jpg: connections, map inputs, Lua, routing, and properties;
 - mapping-bindings.jpg: selected Lua field assignment and its declaration;
 - simulation-preview.jpg: offline motor calculations and prospective records;
-- mcp-agent-access.jpg: Administration > MCP Server connection configuration.
+- mcp-agent-mapping.png: user-supplied screenshot of an MCP agent conversation beside its MicroLogix-to-MQTT mapping.
 
-Each 1280 by 690 JPEG was captured through the running application's UI using the
-motor Simulation example. Preview data is explicitly marked offline/simulated;
-it is not physical-hardware or delivery evidence. The MCP image is the real
-configuration screen, not a fabricated agent conversation. Only the local-path
-status bar was excluded from the captures; application pixels were not retouched.
+The first three 1280 by 690 JPEGs were captured through the running application's
+UI using the motor Simulation example. Preview data is explicitly marked offline/
+simulated. The 2555 by 1366 MCP PNG was supplied by the user on October 17, 2026
+and is included unchanged, showing the workspace and agent conversation together.
+Screenshots illustrate the interface; they do not establish hardware qualification
+or delivery evidence. Only the local-path status bar was excluded from the three
+JPEG captures; application pixels were not retouched.
 Images load lazily and preserve their aspect ratio. Images and Full size links
 open a shared accessible lightbox; close it with its button, Escape, or the backdrop.
 The native dialog traps focus, restores the opener, and prevents background scrolling.
