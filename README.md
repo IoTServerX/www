@@ -40,8 +40,8 @@ ordinary release/version bump. No privileged API token is used or shipped.
 ## Screenshots and branding
 
 Four actual application screenshots in assets/screenshots/ replace the placeholders:
-- connected-workspace.jpg: connections, map inputs, Lua, routing, and properties;
-- mapping-bindings.jpg: selected Lua field assignment and its declaration;
+- connected-workspace.jpg: connections, modeling, transformation, and simulation with routing and shared properties;
+- mapping-bindings.jpg: selected transformation field assignment and its declaration;
 - simulation-preview.jpg: offline motor calculations and prospective records;
 - mcp-agent-mapping.png: user-supplied screenshot of an MCP agent conversation beside its MicroLogix-to-MQTT mapping.
 
