@@ -60,7 +60,8 @@ Replace captures with new real screenshots when the UI changes.
 The old UI photographs remain in assets for provenance but are not displayed.
 Brand assets and the updated IS monogram/social preview are unchanged.
 
-The hero replaces the old connectivity diagram with the supplied 15-second video.
+The hero opens with the supplied 15-second video directly below the header,
+before the headline and description. The header retains the download CTA.
 assets/iot_server_1.webm is silent VP9 at 1280 by 720, with the original MP4 as a
 fallback. assets/iot_server_1-poster.jpg is a still extracted from the video.
 The full 16:9 frame scales to desktop and mobile without cropping. Native controls
