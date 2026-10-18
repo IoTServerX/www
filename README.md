@@ -79,3 +79,13 @@ The original design review in ignored brand-review/ is not published.
 Use a temporary loopback static server only when browser QA is needed:
 python -m http.server 5197 --bind 127.0.0.1
 Stop the owned server after verification. The website needs no Cargo build.
+
+## Platform overview diagram
+
+The People, agents, operations diagram sits directly below the background hero.
+People and AI agents converge at an operator review/activation checkpoint, above
+the shared namespace and modeling, transformation, and simulation capabilities.
+Labeled arrows distinguish incoming signals, outgoing publications and bidirectional
+commands/feedback. Desktop uses three external-system columns; mobile stacks them.
+It is semantic HTML with decorative inline SVG icons and CSS connectors; no image,
+external icon dependency, animation or additional JavaScript is required.
