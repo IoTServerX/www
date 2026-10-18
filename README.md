@@ -60,14 +60,18 @@ Replace captures with new real screenshots when the UI changes.
 The old UI photographs remain in assets for provenance but are not displayed.
 Brand assets and the updated IS monogram/social preview are unchanged.
 
-The hero opens with the supplied 15-second video directly below the header,
-before the headline and description. The header retains the download CTA.
-assets/iot_server_1.webm is silent VP9 at 1280 by 720, with the original MP4 as a
-fallback. assets/iot_server_1-poster.jpg is a still extracted from the video.
-The full 16:9 frame scales to desktop and mobile without cropping. Native controls
-provide pause and replay. Playback loops continuously while muted;
-reduced-motion and data-saving visitors see the poster until they choose Play.
-Playback pauses when the tab is hidden or reduced motion is enabled.
+The supplied second video plays as a decorative background behind the headline.
+The header retains the only download CTA above the fold. A dark gradient preserves
+text contrast; the background fills the hero and crops responsively on mobile.
+assets/iot_server_2-loop.mp4 and .webm are silent 1280 by 720 derivatives. The source
+repeats its opening movement at frame 358 (11.933 seconds). Selecting frames 24
+through 381 places the loop boundary within matching camera movement and removes
+the repeated trailing footage. The loop lasts 11.933 seconds at 30 fps.
+assets/iot_server_2-poster.jpg comes from the loop's first frame.
+Playback loops muted with inline playback and no native player chrome. The small
+pause/play button controls background motion. Reduced-motion and data-saving
+visitors see the poster until they explicitly play. Hidden tabs pause; returning
+resumes only when playback was requested, preserving an explicit user pause.
 The original design review in ignored brand-review/ is not published.
 
 ## Local verification

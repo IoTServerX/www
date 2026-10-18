@@ -46,16 +46,35 @@ const sections=[...document.querySelectorAll('main>section[id]')],navLinks=[...d
 function updateNav(){let id='platform';for(const s of sections)if(s.getBoundingClientRect().top<150)id=s.id;navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}
 document.addEventListener('scroll',updateNav,{passive:true});renderDrivers();
 
-// Loop muted. Native controls let visitors pause or restart playback.
-// With reduced motion or data saving, leave the poster until the visitor plays.
+// Decorative background: explicit pause/play, no player UI or audio.
+// Reduced motion/data saving starts with the poster; manual Play is still available.
 const heroVideo=document.querySelector('#hero-video');
+const heroMotion=document.querySelector('#hero-motion');
+const heroMotionIcon=document.querySelector('#hero-motion-icon');
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
-if(!reducedMotion.matches&&!navigator.connection?.saveData){
-  heroVideo.muted=true;
-  void heroVideo.play().catch(()=>{}); // Autoplay policies may require manual play.
+let heroMotionRequested=!reducedMotion.matches&&!navigator.connection?.saveData;
+function updateHeroMotion(){
+  const playing=!heroVideo.paused;
+  heroMotion.setAttribute('aria-label',playing?'Pause background video':'Play background video');
+  heroMotionIcon.setAttribute('d',playing?'M9 5v14M15 5v14':'M9 5l10 7-10 7Z');
 }
-reducedMotion.addEventListener('change',event=>{if(event.matches)heroVideo.pause();});
-document.addEventListener('visibilitychange',()=>{if(document.hidden)heroVideo.pause();});
+function syncHeroPlayback(){
+  if(heroMotionRequested&&!document.hidden){
+    heroVideo.muted=true;
+    void heroVideo.play().catch(updateHeroMotion);
+  }else heroVideo.pause();
+}
+heroMotion.hidden=false;
+heroMotion.addEventListener('click',()=>{heroMotionRequested=heroVideo.paused;syncHeroPlayback();});
+heroVideo.addEventListener('play',updateHeroMotion);
+heroVideo.addEventListener('pause',updateHeroMotion);
+heroVideo.addEventListener('error',()=>{heroMotion.hidden=true;});
+reducedMotion.addEventListener('change',event=>{
+  if(event.matches){heroMotionRequested=false;syncHeroPlayback();}
+});
+document.addEventListener('visibilitychange',syncHeroPlayback);
+updateHeroMotion();
+syncHeroPlayback();
 
 // Native modal dialog keeps focus inside the lightbox and restores it on close.
 const lightbox=document.querySelector('#screenshot-lightbox');

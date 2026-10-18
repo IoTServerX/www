@@ -26,9 +26,9 @@
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="style.css?v=20261018-video-first">
+  <link rel="stylesheet" href="style.css?v=20261018-background-hero">
   <script src="catalog.js?v=20261014-expanded" defer></script>
-  <script src="app.js?v=20261018-loop" defer></script>
+  <script src="app.js?v=20261018-background-hero" defer></script>
   <title>IoT Server | Agentic Industrial Infrastructure</title>
 </head>
 <body>
@@ -39,16 +39,15 @@
     <a class="small-cta" href="#get-started">Get IoT Server <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5l14 14M5 19h14V5"/></svg></a>
   </header>
   <main id="main">
-    <section class="hero wrap" aria-labelledby="hero-title">
-      <figure class="hero-video">
-        <video id="hero-video" width="1280" height="720" controls loop muted playsinline preload="none" poster="assets/iot_server_1-poster.jpg" aria-label="IoT Server: industrial signals flow to applications and return as equipment control commands." aria-describedby="hero-video-description">
-          <source src="assets/iot_server_1.webm" type="video/webm">
-          <source src="assets/iot_server_1.mp4" type="video/mp4">
-          <p><a href="assets/iot_server_1.mp4">Watch the IoT Server overview video.</a></p>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" aria-hidden="true">
+        <video id="hero-video" width="1280" height="720" loop muted playsinline preload="none" poster="assets/iot_server_2-poster.jpg" tabindex="-1" disablepictureinpicture>
+          <source src="assets/iot_server_2-loop.webm" type="video/webm">
+          <source src="assets/iot_server_2-loop.mp4" type="video/mp4">
         </video>
-        <figcaption id="hero-video-description" class="visually-hidden">A silent, 15-second illustration of industrial equipment sending data to applications, databases and the cloud, then receiving a command that starts another pump. Ends with the IS monogram and IoT Server.</figcaption>
-      </figure>
-      <div class="hero-intro"><div><h1 id="hero-title">Industrial infrastructure.<br><span>Built for people and agents.</span></h1><p class="hero-description">Connect equipment, organize signals, and build the logic that moves your operation forward. IoT Server brings industrial drivers, a unified namespace, visual mapping, Lua, and simulation into one workspace—with tools for AI agents to help you build.</p></div></div>
+      </div>
+      <div class="hero-content wrap"><div class="hero-intro"><h1 id="hero-title">Industrial infrastructure.<br><span>Built for people and agents.</span></h1><p class="hero-description">Connect equipment, organize signals, and build the logic that moves your operation forward. IoT Server brings industrial drivers, a unified namespace, visual mapping, Lua, and simulation into one workspace—with tools for AI agents to help you build.</p></div></div>
+      <button id="hero-motion" class="hero-motion" type="button" aria-label="Play background video" hidden><svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path id="hero-motion-icon" d="M9 5l10 7-10 7Z"/></svg></button>
     </section>
     <nav class="section-nav" aria-label="On this page"><div class="wrap"><a href="#platform" class="active">Platform</a><a href="#agents">Agentic engineering</a><a href="#drivers">Driver library <span data-driver-total>117</span></a><a href="#workflow">How it works</a><a href="#get-started">Get started <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5l14 14M5 19h14V5"/></svg></a></div></nav>
     <section id="platform" class="section wrap" aria-labelledby="platform-title">
