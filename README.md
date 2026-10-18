@@ -63,7 +63,7 @@ The hero replaces the old connectivity diagram with the supplied 15-second video
 assets/iot_server_1.webm is silent VP9 at 1280 by 720, with the original MP4 as a
 fallback. assets/iot_server_1-poster.jpg is a still extracted from the video.
 The full 16:9 frame scales to desktop and mobile without cropping. Native controls
-provide pause and replay. Playback starts muted once, then holds the final frame;
+provide pause and replay. Playback loops continuously while muted;
 reduced-motion and data-saving visitors see the poster until they choose Play.
 Playback pauses when the tab is hidden or reduced motion is enabled.
 The original design review in ignored brand-review/ is not published.

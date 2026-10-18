@@ -46,7 +46,7 @@ const sections=[...document.querySelectorAll('main>section[id]')],navLinks=[...d
 function updateNav(){let id='platform';for(const s of sections)if(s.getBoundingClientRect().top<150)id=s.id;navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}
 document.addEventListener('scroll',updateNav,{passive:true});renderDrivers();
 
-// Play once and hold the final brand frame. Native controls provide pause/replay.
+// Loop muted. Native controls let visitors pause or restart playback.
 // With reduced motion or data saving, leave the poster until the visitor plays.
 const heroVideo=document.querySelector('#hero-video');
 const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
