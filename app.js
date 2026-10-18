@@ -46,38 +46,16 @@ const sections=[...document.querySelectorAll('main>section[id]')],navLinks=[...d
 function updateNav(){let id='platform';for(const s of sections)if(s.getBoundingClientRect().top<150)id=s.id;navLinks.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+id));}
 document.addEventListener('scroll',updateNav,{passive:true});renderDrivers();
 
-// Use viewport coordinates relative to the scene so connectors meet their cards
-// even when labels wrap or the responsive layout changes. A user-space gradient
-// also paints horizontal paths, whose object bounding boxes have zero height.
-const scene=document.querySelector('.network-scene');
-const wires=scene.querySelector('.wires');
-function drawConnections(){
-  const bounds=scene.getBoundingClientRect();
-  const core=scene.querySelector('.server-core').getBoundingClientRect();
-  wires.setAttribute('viewBox',`0 0 ${bounds.width} ${bounds.height}`);
-  const gradient=wires.querySelector('#wire');
-  gradient.setAttribute('x1','0');
-  gradient.setAttribute('x2',String(bounds.width));
-  const centerY=core.top+core.height/2-bounds.top;
-  const paths=[];
-  for(const side of ['sources','destinations']){
-    for(const card of scene.querySelectorAll(`.${side}>div`)){
-      const rect=card.getBoundingClientRect();
-      const left=side==='sources';
-      const x1=(left?rect.right:core.right)-bounds.left;
-      const y1=left?rect.top+rect.height/2-bounds.top:centerY;
-      const x2=(left?core.left:rect.left)-bounds.left;
-      const y2=left?centerY:rect.top+rect.height/2-bounds.top;
-      const middle=(x1+x2)/2;
-      paths.push(`<path data-side="${side}" d="M${x1} ${y1} C${middle} ${y1} ${middle} ${y2} ${x2} ${y2}"/>`);
-    }
-  }
-  wires.querySelector('.wire-paths').innerHTML=paths.join('');
+// Play once and hold the final brand frame. Native controls provide pause/replay.
+// With reduced motion or data saving, leave the poster until the visitor plays.
+const heroVideo=document.querySelector('#hero-video');
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+if(!reducedMotion.matches&&!navigator.connection?.saveData){
+  heroVideo.muted=true;
+  void heroVideo.play().catch(()=>{}); // Autoplay policies may require manual play.
 }
-const connectionObserver=new ResizeObserver(drawConnections);
-connectionObserver.observe(scene);
-scene.querySelectorAll('.endpoints>div,.server-core').forEach(el=>connectionObserver.observe(el));
-drawConnections();
+reducedMotion.addEventListener('change',event=>{if(event.matches)heroVideo.pause();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)heroVideo.pause();});
 
 // Native modal dialog keeps focus inside the lightbox and restores it on close.
 const lightbox=document.querySelector('#screenshot-lightbox');

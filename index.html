@@ -26,9 +26,9 @@
   <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="style.css?v=20261017-lightbox">
+  <link rel="stylesheet" href="style.css?v=20261018-hero-video">
   <script src="catalog.js?v=20261014-expanded" defer></script>
-  <script src="app.js?v=20261017-lightbox" defer></script>
+  <script src="app.js?v=20261018-hero-video" defer></script>
   <title>IoT Server | Agentic Industrial Infrastructure</title>
 </head>
 <body>
@@ -41,16 +41,14 @@
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-intro"><div><p class="eyebrow">AGENTIC INDUSTRIAL INFRASTRUCTURE</p><h1 id="hero-title">Industrial infrastructure.<br><span>Built for people and agents.</span></h1><p class="hero-description">Connect equipment, organize signals, and build the logic that moves your operation forward. IoT Server brings industrial drivers, a unified namespace, visual mapping, Lua, and simulation into one workspace—with tools for AI agents to help you build.</p></div><div class="hero-actions"><a class="cta-block" href="#get-started"><span>Get IoT Server</span><small>Built in Rust. Ready for Windows.</small><svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5l14 14M5 19h14V5"/></svg></a><a class="text-link" href="#platform">Explore the platform <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 4v16m-6-6 6 6 6-6"/></svg></a></div></div>
-      <div class="connection-visual" role="img" aria-label="Industrial equipment and data sources connect through IoT Server to applications, operations, people and AI agents.">
-        <div class="visual-top"><span><i class="signal"></i> FROM INDIVIDUAL SIGNALS TO CONNECTED SYSTEMS</span><span>ONE SHARED FOUNDATION</span></div>
-        <div class="network-scene">
-          <svg class="wires" aria-hidden="true"><defs><linearGradient id="wire" gradientUnits="userSpaceOnUse"><stop stop-color="#4973b3"/><stop offset=".5" stop-color="#8cbaff"/><stop offset="1" stop-color="#4973b3"/></linearGradient></defs><g class="wire-paths" fill="none" stroke="url(#wire)" stroke-width="1.5" stroke-linecap="round"></g></svg>
-          <div class="endpoints sources"><div><span class="line-icon">▥</span><p>PLCs &amp; controllers<small>Allen-Bradley · Siemens · Omron</small></p></div><div><span class="line-icon">⌁</span><p>Process &amp; field devices<small>Modbus · DNP · IEC · BACnet</small></p></div><div><span class="line-icon">▤</span><p>Data &amp; connected systems<small>OPC UA · MQTT · ODBC</small></p></div></div>
-          <div class="server-core"><div class="core-caption">INDUSTRIAL INFRASTRUCTURE</div><img src="assets/logo-mark.svg" alt="" width="66" height="66"><strong>IoT Server</strong><span class="core-status"><i class="signal"></i> CONNECT · MAP · SIMULATE · RUN</span><div class="server-slots"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-          <div class="endpoints destinations"><div><span class="endpoint-code">↗</span><p>Applications &amp; data<small>MQTT · SQL · cloud · analytics</small></p></div><div><span class="endpoint-code">UA</span><p>Industrial operations<small>OPC UA · HMI · controllers</small></p></div><div><span class="endpoint-code">{ }</span><p>People &amp; agents<small>Visual workspace · MCP</small></p></div></div>
-        </div>
-        <div class="visual-bottom"><p><strong data-driver-total>117</strong><span>driver families.<br>One growing catalog.</span></p><p><strong>Lua</strong><span>logic &amp; transformations.<br>From signals to outcomes.</span></p><p><strong>01</strong><span>workspace.<br>People and agents, together.</span></p></div>
-      </div>
+      <figure class="hero-video">
+        <video id="hero-video" width="1280" height="720" controls muted playsinline preload="none" poster="assets/iot_server_1-poster.jpg" aria-label="IoT Server: industrial signals flow to applications and return as equipment control commands." aria-describedby="hero-video-description">
+          <source src="assets/iot_server_1.webm" type="video/webm">
+          <source src="assets/iot_server_1.mp4" type="video/mp4">
+          <p><a href="assets/iot_server_1.mp4">Watch the IoT Server overview video.</a></p>
+        </video>
+        <figcaption id="hero-video-description" class="visually-hidden">A silent, 15-second illustration of industrial equipment sending data to applications, databases and the cloud, then receiving a command that starts another pump. Ends with the IS monogram and IoT Server.</figcaption>
+      </figure>
     </section>
     <nav class="section-nav" aria-label="On this page"><div class="wrap"><a href="#platform" class="active">Platform</a><a href="#agents">Agentic engineering</a><a href="#drivers">Driver library <span data-driver-total>117</span></a><a href="#workflow">How it works</a><a href="#get-started">Get started <svg class="action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 5l14 14M5 19h14V5"/></svg></a></div></nav>
     <section id="platform" class="section wrap" aria-labelledby="platform-title">
