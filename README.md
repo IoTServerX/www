@@ -20,7 +20,8 @@ Refresh driver statuses against current source in a separately reviewed change.
 
 ## Latest downloads
 
-Header and hero Get IoT Server links scroll to the bottom download section.
+The header Get IoT Server link scrolls to the bottom download section.
+The headline has no duplicate download button.
 There is no download popup. Installer and portable are ordinary links.
 On page load, app.js fetches GitHub's latest non-prerelease release metadata,
 locates the Windows x64 setup EXE and portable ZIP by asset naming convention,
