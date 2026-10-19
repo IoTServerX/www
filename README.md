@@ -41,13 +41,16 @@ ordinary release/version bump. No privileged API token is used or shipped.
 
 Four actual application screenshots in assets/screenshots/ replace the placeholders:
 - connected-workspace.jpg: connections, modeling, transformation, and simulation with routing and shared properties;
-- mapping-bindings.jpg: selected transformation field assignment and its declaration;
+- detailed-mapping-canvas.jpg: two inputs with 20 records each, utilization/load calculations, rolling statistics, field-level routing, and MQTT/SQL destinations;
 - simulation-preview.jpg: offline motor calculations and prospective records;
 - mcp-agent-mapping.png: user-supplied screenshot of an MCP agent conversation beside its MicroLogix-to-MQTT mapping.
 
-The first three 1280 by 690 JPEGs were captured through the running application's
-UI using the motor Simulation example. Preview data is explicitly marked offline/
-simulated. The 2555 by 1366 MCP PNG was supplied by the user on October 17, 2026
+The three displayed JPEGs are 1280 by 690 captures of the running application's
+UI. The detailed mapping capture was updated on October 19, 2026, using an isolated
+eight-node Motor health & production demonstration based on the motor Simulation
+example, with all four connections in simulation mode and no runtime activation.
+The other two JPEGs use the original motor Simulation example. Preview data is
+explicitly marked offline/simulated. The 2555 by 1366 MCP PNG was supplied by the user on October 17, 2026
 and is included unchanged, showing the workspace and agent conversation together.
 Screenshots illustrate the interface; they do not establish hardware qualification
 or delivery evidence. Only the local-path status bar was excluded from the three
