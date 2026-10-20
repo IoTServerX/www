@@ -61,7 +61,11 @@ The native dialog traps focus, restores the opener, and prevents background scro
 Without JavaScript, the links navigate directly to the image in the same tab.
 Replace captures with new real screenshots when the UI changes.
 The old UI photographs remain in assets for provenance but are not displayed.
-Brand assets and the updated IS monogram/social preview are unchanged.
+The application and website now share the supplied DIME mark, with Data In Motion
+Enterprise above IoT Server in the header, footer and platform diagram. The original
+transparent PNG is retained as assets/dime-logo-white.png; browser/install icons and
+the social preview derive from that mark. Existing screenshots retain their original
+application pixels until new captures are available.
 
 The supplied second video plays as a decorative background behind the headline.
 The header retains the only download CTA above the fold. A dark gradient preserves

@@ -63,3 +63,17 @@
 .overview-section-close strong{font-weight:500;color:#dae6f7}
 @media(max-width:700px){.overview-engineering{gap:12px;margin-top:28px}.overview-author{flex-direction:column;gap:12px;text-align:center;padding:18px 10px}.overview-author strong{font-size:16px}.overview-author small{font-size:12px}.overview-review-bridge{font-size:12px}.overview-review-bridge>div{gap:7px;padding-inline:8px}.overview-operating-platform{padding:22px 20px}.overview-engine-title{gap:12px}.overview-engine-title strong{font-size:25px}.overview-engine-title small{font-size:12px}.overview-foundation{font-size:15px;gap:9px;padding:17px 0}.overview-foundation>span{width:100%;margin-left:33px;font-size:12px}.overview-functions{grid-template-columns:1fr;gap:18px;padding-top:20px}.overview-functions>span{font-size:15px}.overview-external-grid{grid-template-columns:1fr;gap:0}.overview-external-link{min-height:55px}.overview-system{min-height:130px;padding:20px 12px}.overview-system strong{font-size:16px}.overview-section-close{flex-direction:column;gap:6px;font-size:12px}}
 @media(max-width:700px){.hero-content{min-height:max(580px,calc(100svh - 79px));padding-block:56px 96px}.hero-media video{object-position:60% center}.hero-media::after{background:linear-gradient(90deg,#080c13e8,#080c139c),linear-gradient(0deg,#080c13,transparent 25%,transparent 85%,#080c1333)}.hero-motion{right:18px;bottom:18px}}
+
+/* Shared DIME / IoT Server lockup. */
+.brand{gap:11px;letter-spacing:normal}
+.brand img{width:59px;height:59px;object-fit:contain;flex-shrink:0}
+.brand-type{display:flex;flex-direction:column;gap:0}
+.brand-type>span{font-size:12px;font-weight:400;letter-spacing:.4px;line-height:1.6;color:#b5c6dd}
+.brand-type>strong{font-size:27px;font-weight:600;letter-spacing:-.4px;line-height:1.2;color:#f0f5fd}
+.site-footer .brand img{width:53px;height:53px}
+.site-footer .brand-type>strong{font-size:23px}
+.overview-engine-title img{width:59px;height:59px;object-fit:contain;flex-shrink:0}
+.overview-brand-parent{display:block;font-size:12px;letter-spacing:.4px;color:#b5c6dd}
+@media(max-width:1000px) and (min-width:701px){.site-header{gap:20px}.site-header nav{gap:16px}.site-header .small-cta{gap:12px;padding:13px}.site-header .brand-type>span{font-size:11px}.site-header .brand-type>strong{font-size:25px}}
+@media(max-width:700px){.site-header{height:auto;min-height:88px;padding-block:14px;flex-wrap:wrap}.brand img{width:46px;height:46px}.brand-type>span{font-size:10px;letter-spacing:.15px}.brand-type>strong{font-size:23px}.overview-engine-title{flex-wrap:wrap}.overview-engine-title img{width:53px;height:53px}.overview-brand-parent{font-size:11px}.site-footer .brand-type>span{font-size:11px}}
+@media(max-width:380px){.site-header .small-cta{margin-left:57px}.site-header{row-gap:10px}}
