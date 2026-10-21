@@ -10,13 +10,57 @@ downloads replace the former plugin presentation. Agent authoring is described
 as supported configuration preparation/preview/Save; operator Apply and Start
 remain distinct. Metadata and social descriptions use the same positioning.
 
-The searchable catalog in catalog.js is retained unchanged by this copy update:
-117 driver/source families, including the 71 original entries and 46 planned
-additions identified in the Litmus and DIME comparison. Cards remain noninteractive.
-Skeleton/planned entries stay gray, with accessible status and a visible legend.
-Search, all six category filters and counts continue to derive from that catalog.
-Status is a catalog inventory, not a claim that every family ships in a download.
-Refresh driver statuses against current source in a separately reviewed change.
+The searchable catalog in catalog.js contains 135 driver/source families:
+86 implemented runtimes, 15 unavailable skeletons and 34 planned families.
+The 106 Rust acquisition identities were reconciled to the current source and
+read-only executable catalog on October 21, 2026. Existing planned DIME families
+are retained. Reviewed Litmus network and local sources are grouped by family; registration
+aliases and distinct profiles share a card when appropriate.
+Serial-only drivers and the TCP-to-local-RTU gateway are excluded. RTU framing
+over a TCP endpoint remains a network profile. Generic Device lists network
+modes only. Local CAN, workbook, HID and signal-generator sources are distinct
+from serial-only acquisition.
+
+Cards remain noninteractive. Skeleton/planned entries stay gray, with accessible
+status and a visible legend. Search, all six category filters and counts derive
+from the catalog. An implemented family indicates a runtime subset; it does not
+claim every model, feature, release package or physical controller is qualified.
+Keep catalog.js, the index fallback counts and the catalog cache version aligned
+when changing the list. Private mapping evidence is retained outside this public
+website repository.
+
+Brother Speedio now includes the five documented SX1 models, execution/running
+status, read-only CNC file signals and bounded scalar PLC access. Its source and
+manual tests do not establish physical controller qualification. Serial models
+and older Brother record layouts remain outside this implementation.
+
+Thirty-two additional Litmus-derived acquisition profiles have bounded Rust core,
+production host, native editor and typed-authoring verification. The compiled
+catalog reports 106 acquisition identities, 89 available runtimes and 184 models.
+The website consolidates the two S5 profiles, both PROFINET policies and the two
+OSI lifecycles by family. Supported subsets and physical-device qualification
+remain separate.
+
+The added sources include raw MQTT ingress, DeviceHub HTTP2/protobuf ingress,
+authenticated OSI/Ignition NATS subscriptions, PROFINET raw record reads and
+RWS1 Digest/cookie JSON reads. Totalflow exposes numeric DB2 format0 reads using
+a fresh TCP connection and complete native record checks. Heidenhain exposes
+fixed-family read-only LSV2 program state/running, active program/block and
+overrides; SDK PLC/file/tool/axes APIs remain unavailable. S5 has separate
+word/KG and byte/IEEE profiles.
+
+Yaskawa MP2300 supports the fixed official EDS Input Only connection and six
+raw input bytes. Running semantics and the original128-byte image are unproved.
+CAN Raw and HID Device are skipped at user request because the Windows adapter/
+backend and HID device/report format are unspecified. Their earlier prototype
+code and software test evidence remain historical; both catalog cards are
+planned and neither is available for supported connection/signal authoring.
+
+CSV/IND256x/Syslog retain incoming records; REST supports plain HTTP GET.
+Excel reads cached cells or formula text. Scale and Generic Device expose
+explicit bounded raw TCP Poll templates. SEW reads raw MOVILINK parameters;
+Sinumerik 808D preserves its native IEC counter/timer layouts.
+Thermo availability was reconciled with its existing SV100/SV180 runtime.
 
 ## Latest downloads
 

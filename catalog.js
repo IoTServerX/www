@@ -3,16 +3,16 @@ const DRIVERS = [
     "id": "abb_robot_rws",
     "name": "ABB Robot Web Services",
     "category": "CNCs & robots",
-    "protocol": "RWS / HTTP",
-    "status": "planned",
+    "protocol": "RWS1 / HTTP DIGEST",
+    "status": "implemented",
     "number": 1
   },
   {
     "id": "abb_totalflow_db2",
     "name": "ABB Totalflow DB2",
     "category": "Process & energy",
-    "protocol": "TOTALFLOW DB2",
-    "status": "planned",
+    "protocol": "DB2 FORMAT0 / TCP",
+    "status": "implemented",
     "number": 2
   },
   {
@@ -76,7 +76,7 @@ const DRIVERS = [
     "name": "Aromat Ethernet",
     "number": 10,
     "category": "PLCs & controllers",
-    "protocol": "ETHERNET",
+    "protocol": "ET-LAN / MEWTOCOL",
     "status": "implemented"
   },
   {
@@ -109,7 +109,7 @@ const DRIVERS = [
     "number": 14,
     "category": "PLCs & controllers",
     "protocol": "TCP / ETHERNET",
-    "status": "skeleton"
+    "status": "implemented"
   },
   {
     "id": "bacnet_ip",
@@ -139,16 +139,16 @@ const DRIVERS = [
     "id": "brother_speedio",
     "name": "Brother Speedio Ethernet",
     "category": "CNCs & robots",
-    "protocol": "CNC / ETHERNET",
-    "status": "planned",
+    "protocol": "SX1 / TCP",
+    "status": "implemented",
     "number": 18
   },
   {
     "id": "brother_tc",
     "name": "Brother TC Ethernet",
     "category": "CNCs & robots",
-    "protocol": "CNC / ETHERNET",
-    "status": "planned",
+    "protocol": "TC CNC / TCP",
+    "status": "implemented",
     "number": 19
   },
   {
@@ -160,17 +160,33 @@ const DRIVERS = [
     "status": "implemented"
   },
   {
+    "id": "can_raw",
+    "name": "CAN Raw",
+    "category": "PLCs & controllers",
+    "protocol": "RAW CAN / BACKEND UNSPECIFIED",
+    "status": "planned",
+    "number": 21
+  },
+  {
+    "id": "cip_ethernet",
+    "name": "CIP Ethernet",
+    "category": "PLCs & controllers",
+    "protocol": "UNCONNECTED CIP / TCP",
+    "status": "implemented",
+    "number": 22
+  },
+  {
     "id": "claude_code",
     "name": "Claude Code",
     "category": "Data & enterprise",
     "protocol": "CLAUDE CODE INTEGRATION",
     "status": "planned",
-    "number": 21
+    "number": 23
   },
   {
     "id": "codesys",
     "name": "CODESYS",
-    "number": 22,
+    "number": 24,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -178,31 +194,39 @@ const DRIVERS = [
   {
     "id": "controllogix_ethernet",
     "name": "ControlLogix Ethernet",
-    "number": 23,
+    "number": 25,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET/IP / CIP",
     "status": "implemented"
   },
   {
+    "id": "csv_stream",
+    "name": "CSV Stream",
+    "category": "Data & enterprise",
+    "protocol": "UTF-8 RECORDS / TCP",
+    "status": "implemented",
+    "number": 26
+  },
+  {
     "id": "cutlerhammer_elc_ethernet",
     "name": "Cutler-Hammer ELC Ethernet",
-    "number": 24,
+    "number": 27,
     "category": "PLCs & controllers",
     "protocol": "TCP / ETHERNET",
     "status": "implemented"
   },
   {
     "id": "danfoss_ethernet",
-    "name": "Danfoss Ethernet Drives",
+    "name": "Danfoss FC/TSC",
     "category": "Motion & drives",
-    "protocol": "DRIVE / ETHERNET",
-    "status": "planned",
-    "number": 25
+    "protocol": "FC PARAMETERS / TCP",
+    "status": "implemented",
+    "number": 28
   },
   {
     "id": "dataforth_isolynx",
     "name": "Dataforth ISOLYNX Ethernet",
-    "number": 26,
+    "number": 29,
     "category": "Building & infrastructure",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -213,28 +237,52 @@ const DRIVERS = [
     "category": "PLCs & controllers",
     "protocol": "DVP / ETHERNET",
     "status": "planned",
-    "number": 27
+    "number": 30
+  },
+  {
+    "id": "devicehub_agent",
+    "name": "DeviceHub Agent",
+    "category": "Data & enterprise",
+    "protocol": "gRPC / HTTP2",
+    "status": "implemented",
+    "number": 31
   },
   {
     "id": "dnp_ethernet",
     "name": "DNP Client Ethernet",
-    "number": 28,
+    "number": 32,
     "category": "Process & energy",
     "protocol": "TCP + UDP",
     "status": "implemented"
   },
   {
+    "id": "enron_modbus",
+    "name": "Enron Modbus",
+    "category": "Process & energy",
+    "protocol": "ENRON MODBUS / TCP",
+    "status": "planned",
+    "number": 33
+  },
+  {
     "id": "euromap_63",
     "name": "EUROMAP 63",
-    "number": 29,
+    "number": 34,
     "category": "Data & enterprise",
     "protocol": "FILE EXCHANGE",
     "status": "implemented"
   },
   {
+    "id": "excel_workbook",
+    "name": "Excel Workbook",
+    "category": "Data & enterprise",
+    "protocol": "READ-ONLY XLSX / LOCAL",
+    "status": "implemented",
+    "number": 35
+  },
+  {
     "id": "fanuc_focas_ethernet",
     "name": "Fanuc Focas Ethernet",
-    "number": 30,
+    "number": 36,
     "category": "CNCs & robots",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -245,12 +293,12 @@ const DRIVERS = [
     "category": "CNCs & robots",
     "protocol": "SNPX",
     "status": "planned",
-    "number": 31
+    "number": 37
   },
   {
     "id": "fisher_roc_ethernet",
     "name": "Fisher ROC Ethernet",
-    "number": 32,
+    "number": 38,
     "category": "Process & energy",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -258,7 +306,7 @@ const DRIVERS = [
   {
     "id": "fisher_rocplus_ethernet",
     "name": "Fisher ROC Plus Ethernet",
-    "number": 33,
+    "number": 39,
     "category": "Process & energy",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -267,25 +315,33 @@ const DRIVERS = [
     "id": "fuji_sph2000",
     "name": "Fuji SPH2000 Ethernet",
     "category": "PLCs & controllers",
-    "protocol": "SPH / ETHERNET",
-    "status": "planned",
-    "number": 34
+    "protocol": "SPH LOADER / TCP",
+    "status": "implemented",
+    "number": 40
   },
   {
     "id": "ge_ethernet",
     "name": "GE Ethernet",
-    "number": 35,
+    "number": 41,
     "category": "PLCs & controllers",
-    "protocol": "ETHERNET",
+    "protocol": "SRTP / ETHERNET",
     "status": "implemented"
   },
   {
     "id": "ge_egd",
     "name": "GE Ethernet Global Data",
-    "number": 36,
+    "number": 42,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET",
     "status": "implemented"
+  },
+  {
+    "id": "generic_device",
+    "name": "Generic Device",
+    "category": "PLCs & controllers",
+    "protocol": "LITERAL TCP POLL",
+    "status": "implemented",
+    "number": 43
   },
   {
     "id": "haas_shdr",
@@ -293,28 +349,36 @@ const DRIVERS = [
     "category": "CNCs & robots",
     "protocol": "SHDR / TCP",
     "status": "planned",
-    "number": 37
+    "number": 44
   },
   {
     "id": "heidenhain_530",
     "name": "Heidenhain 530 Ethernet",
     "category": "CNCs & robots",
-    "protocol": "CNC / ETHERNET",
-    "status": "planned",
-    "number": 38
+    "protocol": "READ-ONLY LSV2 / TCP",
+    "status": "implemented",
+    "number": 45
   },
   {
     "id": "heidenhain_640",
     "name": "Heidenhain 640 Ethernet",
     "category": "CNCs & robots",
-    "protocol": "CNC / ETHERNET",
+    "protocol": "READ-ONLY LSV2 / TCP",
+    "status": "implemented",
+    "number": 46
+  },
+  {
+    "id": "hid_device",
+    "name": "HID Device",
+    "category": "Building & infrastructure",
+    "protocol": "HID INPUT / DEVICE FORMAT UNSPECIFIED",
     "status": "planned",
-    "number": 39
+    "number": 47
   },
   {
     "id": "honeywell_hc900_ethernet",
     "name": "Honeywell HC900 Ethernet",
-    "number": 40,
+    "number": 48,
     "category": "Process & energy",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -322,7 +386,7 @@ const DRIVERS = [
   {
     "id": "honeywell_udc_ethernet",
     "name": "Honeywell UDC Ethernet",
-    "number": 41,
+    "number": 49,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "implemented"
@@ -333,20 +397,20 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "HTTP SERVER",
     "status": "planned",
-    "number": 42
+    "number": 50
   },
   {
     "id": "iec_60870_5_102",
     "name": "IEC 60870-5-102 Ethernet",
     "category": "Process & energy",
-    "protocol": "IEC 60870-5-102",
-    "status": "planned",
-    "number": 43
+    "protocol": "FT1.2 / TCP",
+    "status": "implemented",
+    "number": 51
   },
   {
     "id": "iec_60870_5_104",
     "name": "IEC 60870-5-104 Client",
-    "number": 44,
+    "number": 52,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "implemented"
@@ -354,7 +418,7 @@ const DRIVERS = [
   {
     "id": "iec_61850_mms",
     "name": "IEC 61850 MMS Client",
-    "number": 45,
+    "number": 53,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "implemented"
@@ -363,14 +427,22 @@ const DRIVERS = [
     "id": "ignition",
     "name": "Ignition",
     "category": "Data & enterprise",
-    "protocol": "IGNITION INTEGRATION",
-    "status": "planned",
-    "number": 46
+    "protocol": "NATS / TCP",
+    "status": "implemented",
+    "number": 54
+  },
+  {
+    "id": "industrial_ot_server",
+    "name": "Industrial OT Server",
+    "category": "Data & enterprise",
+    "protocol": "MQTT 3.1.1 / TCP",
+    "status": "implemented",
+    "number": 55
   },
   {
     "id": "iotech_pointscan",
     "name": "IOtech PointScan 100",
-    "number": 47,
+    "number": 56,
     "category": "Building & infrastructure",
     "protocol": "UDP / ETHERNET",
     "status": "implemented"
@@ -381,12 +453,12 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "HTTP / JSON",
     "status": "planned",
-    "number": 48
+    "number": 57
   },
   {
     "id": "keyence_ethernet",
     "name": "Keyence Ethernet",
-    "number": 49,
+    "number": 58,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -394,7 +466,7 @@ const DRIVERS = [
   {
     "id": "krauss_maffei_mc4",
     "name": "Krauss Maffei MC4 Ethernet",
-    "number": 50,
+    "number": 59,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "implemented"
@@ -402,18 +474,18 @@ const DRIVERS = [
   {
     "id": "memory_based",
     "name": "Memory Based",
-    "number": 51,
+    "number": 60,
     "category": "Data & enterprise",
     "protocol": "LOCAL MEMORY",
     "status": "implemented"
   },
   {
     "id": "mettler_ind256x",
-    "name": "Mettler Toledo / IND256x",
+    "name": "Mettler Toledo IND256x",
     "category": "Process & energy",
-    "protocol": "WEIGHING / ETHERNET",
-    "status": "planned",
-    "number": 52
+    "protocol": "CONTINUOUS WEIGHING / TCP",
+    "status": "implemented",
+    "number": 61
   },
   {
     "id": "microsoft_sql_server",
@@ -421,12 +493,12 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "SQL SERVER",
     "status": "planned",
-    "number": 53
+    "number": 62
   },
   {
     "id": "mitsubishi_cnc_ethernet",
     "name": "Mitsubishi CNC Ethernet",
-    "number": 54,
+    "number": 63,
     "category": "CNCs & robots",
     "protocol": "TCP / ETHERNET",
     "status": "implemented"
@@ -434,34 +506,50 @@ const DRIVERS = [
   {
     "id": "mitsubishi_ethernet",
     "name": "Mitsubishi Ethernet",
-    "number": 55,
+    "number": 64,
     "category": "PLCs & controllers",
-    "protocol": "MC / TCP",
+    "protocol": "MC BINARY / TCP + UDP",
     "status": "implemented"
   },
   {
     "id": "modbus_ethernet",
     "name": "Modbus Ethernet",
-    "number": 56,
+    "number": 65,
     "category": "PLCs & controllers",
     "protocol": "MODBUS TCP / UDP",
     "status": "implemented"
   },
   {
+    "id": "modbus_rtu_over_tcp",
+    "name": "Modbus RTU over TCP",
+    "category": "PLCs & controllers",
+    "protocol": "RTU FRAMING / TCP",
+    "status": "planned",
+    "number": 66
+  },
+  {
     "id": "mqtt_client",
     "name": "MQTT Client",
-    "number": 57,
+    "number": 67,
     "category": "Data & enterprise",
-    "protocol": "MQTT",
+    "protocol": "MQTT / JSON SUBSCRIPTIONS",
     "status": "implemented"
   },
   {
     "id": "mtconnect_client",
     "name": "MTConnect Client",
-    "number": 58,
+    "number": 68,
     "category": "Data & enterprise",
     "protocol": "HTTP",
     "status": "implemented"
+  },
+  {
+    "id": "mysql",
+    "name": "MySQL",
+    "category": "Data & enterprise",
+    "protocol": "MYSQL / TCP",
+    "status": "planned",
+    "number": 69
   },
   {
     "id": "nws_weather",
@@ -469,12 +557,12 @@ const DRIVERS = [
     "category": "Building & infrastructure",
     "protocol": "WEATHER / HTTP",
     "status": "planned",
-    "number": 59
+    "number": 70
   },
   {
     "id": "odbc_client",
     "name": "ODBC Client",
-    "number": 60,
+    "number": 71,
     "category": "Data & enterprise",
     "protocol": "ODBC",
     "status": "implemented"
@@ -482,15 +570,15 @@ const DRIVERS = [
   {
     "id": "omron_fins_ethernet",
     "name": "Omron FINS Ethernet",
-    "number": 61,
+    "number": 72,
     "category": "PLCs & controllers",
-    "protocol": "FINS / ETHERNET",
+    "protocol": "FINS / UDP",
     "status": "implemented"
   },
   {
     "id": "omron_nj_ethernet",
     "name": "Omron NJ Ethernet",
-    "number": 62,
+    "number": 73,
     "category": "PLCs & controllers",
     "protocol": "TCP / ETHERNET",
     "status": "implemented"
@@ -498,7 +586,7 @@ const DRIVERS = [
   {
     "id": "opcua_client",
     "name": "OPC UA Client",
-    "number": 63,
+    "number": 74,
     "category": "Data & enterprise",
     "protocol": "OPC UA",
     "status": "implemented"
@@ -509,7 +597,7 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "OPC UA CONDITIONS",
     "status": "planned",
-    "number": 64
+    "number": 75
   },
   {
     "id": "opcua_events",
@@ -517,12 +605,12 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "OPC UA EVENTS",
     "status": "planned",
-    "number": 65
+    "number": 76
   },
   {
     "id": "opc_xml_da_client",
     "name": "OPC XML-DA Client",
-    "number": 66,
+    "number": 77,
     "category": "Data & enterprise",
     "protocol": "OPC XML-DA / HTTP",
     "status": "implemented"
@@ -530,7 +618,7 @@ const DRIVERS = [
   {
     "id": "optilogic",
     "name": "Optimation OptiLogic",
-    "number": 67,
+    "number": 78,
     "category": "Building & infrastructure",
     "protocol": "ETHERNET",
     "status": "implemented"
@@ -538,23 +626,47 @@ const DRIVERS = [
   {
     "id": "opto22_ethernet",
     "name": "Opto 22 Ethernet",
-    "number": 68,
+    "number": 79,
     "category": "Building & infrastructure",
-    "protocol": "TCP + UDP",
+    "protocol": "MMIO / TCP + UDP",
     "status": "implemented"
+  },
+  {
+    "id": "osi_agent",
+    "name": "OSI Agent",
+    "category": "Data & enterprise",
+    "protocol": "NATS / TCP (LEGACY + ADVANCED V1)",
+    "status": "implemented",
+    "number": 80
+  },
+  {
+    "id": "panasonic_mewtocol",
+    "name": "Panasonic FP / MEWTOCOL Ethernet",
+    "category": "PLCs & controllers",
+    "protocol": "MEWTOCOL-COM / TCP",
+    "status": "planned",
+    "number": 81
+  },
+  {
+    "id": "panasonic_fp7",
+    "name": "Panasonic FP7 Ethernet",
+    "category": "PLCs & controllers",
+    "protocol": "MEWTOCOL7 / TCP",
+    "status": "implemented",
+    "number": 82
   },
   {
     "id": "parker_acr9000",
     "name": "Parker ACR9000 Ethernet",
     "category": "Motion & drives",
-    "protocol": "ACR / ETHERNET",
-    "status": "planned",
-    "number": 69
+    "protocol": "ACR PARAMETERS / TCP",
+    "status": "implemented",
+    "number": 83
   },
   {
     "id": "ping",
     "name": "Ping",
-    "number": 70,
+    "number": 84,
     "category": "Building & infrastructure",
     "protocol": "ICMP",
     "status": "implemented"
@@ -565,7 +677,7 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "POSTGRESQL",
     "status": "planned",
-    "number": 71
+    "number": 85
   },
   {
     "id": "postgres_notifications",
@@ -573,7 +685,7 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "LISTEN / NOTIFY",
     "status": "planned",
-    "number": 72
+    "number": 86
   },
   {
     "id": "productive_robotics_ob7",
@@ -581,15 +693,15 @@ const DRIVERS = [
     "category": "CNCs & robots",
     "protocol": "ROSBRIDGE / WEBSOCKET",
     "status": "planned",
-    "number": 73
+    "number": 87
   },
   {
     "id": "profinet_acyclic",
     "name": "PROFINET Acyclic",
     "category": "PLCs & controllers",
-    "protocol": "PROFINET",
-    "status": "planned",
-    "number": 74
+    "protocol": "PNIO-CM / UDP (GENERAL + TURCK)",
+    "status": "implemented",
+    "number": 88
   },
   {
     "id": "pvi",
@@ -597,7 +709,7 @@ const DRIVERS = [
     "category": "PLCs & controllers",
     "protocol": "PVI",
     "status": "planned",
-    "number": 75
+    "number": 89
   },
   {
     "id": "redis",
@@ -605,7 +717,15 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "REDIS",
     "status": "planned",
-    "number": 76
+    "number": 90
+  },
+  {
+    "id": "rest_client",
+    "name": "REST Client",
+    "category": "Data & enterprise",
+    "protocol": "HTTP GET / JSON",
+    "status": "implemented",
+    "number": 91
   },
   {
     "id": "ros2",
@@ -613,31 +733,39 @@ const DRIVERS = [
     "category": "CNCs & robots",
     "protocol": "ROS 2 / DDS",
     "status": "planned",
-    "number": 77
+    "number": 92
   },
   {
     "id": "saia_ethernet",
-    "name": "Saia Ethernet",
+    "name": "Saia Ether-S-Bus Ethernet",
     "category": "PLCs & controllers",
-    "protocol": "S-BUS / ETHERNET",
-    "status": "planned",
-    "number": 78
+    "protocol": "ETHER-S-BUS / UDP",
+    "status": "implemented",
+    "number": 93
   },
   {
     "id": "sattbus_ethernet",
     "name": "SattBus Ethernet",
-    "number": 79,
+    "number": 94,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET",
-    "status": "skeleton"
+    "status": "implemented"
+  },
+  {
+    "id": "scale_network",
+    "name": "Scale Network",
+    "category": "Process & energy",
+    "protocol": "RAW TCP POLL",
+    "status": "implemented",
+    "number": 95
   },
   {
     "id": "scanivalve_ethernet",
     "name": "Scanivalve Ethernet",
-    "number": 80,
+    "number": 96,
     "category": "Process & energy",
     "protocol": "ETHERNET",
-    "status": "skeleton"
+    "status": "implemented"
   },
   {
     "id": "script_source",
@@ -645,44 +773,44 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "SCRIPTING",
     "status": "planned",
-    "number": 81
+    "number": 97
   },
   {
     "id": "sew_drive",
     "name": "SEW Drives",
     "category": "Motion & drives",
-    "protocol": "DRIVE / ETHERNET",
-    "status": "planned",
-    "number": 82
+    "protocol": "CIP / MOVILINK",
+    "status": "implemented",
+    "number": 98
   },
   {
     "id": "siemens_s5",
     "name": "Siemens S5 Ethernet",
     "category": "PLCs & controllers",
-    "protocol": "S5 / ETHERNET",
-    "status": "planned",
-    "number": 83
+    "protocol": "S5 ISO / TCP (WORD/KG + BYTE/IEEE)",
+    "status": "implemented",
+    "number": 99
   },
   {
     "id": "siemens_s7_plus",
     "name": "Siemens S7 Plus Ethernet",
-    "number": 84,
+    "number": 100,
     "category": "PLCs & controllers",
     "protocol": "TCP / ETHERNET",
-    "status": "skeleton"
+    "status": "implemented"
   },
   {
     "id": "siemens_sinumerik_808d",
     "name": "Siemens Sinumerik 808D",
     "category": "CNCs & robots",
     "protocol": "SINUMERIK",
-    "status": "planned",
-    "number": 85
+    "status": "implemented",
+    "number": 101
   },
   {
     "id": "siemens_tcpip_ethernet",
     "name": "Siemens TCP/IP Ethernet",
-    "number": 86,
+    "number": 102,
     "category": "PLCs & controllers",
     "protocol": "S7COMM / TCP",
     "status": "implemented"
@@ -690,23 +818,31 @@ const DRIVERS = [
   {
     "id": "siemens_tcpip_server",
     "name": "Siemens TCP/IP Server Ethernet",
-    "number": 87,
+    "number": 103,
     "category": "PLCs & controllers",
     "protocol": "TCP / ETHERNET",
-    "status": "skeleton"
+    "status": "implemented"
+  },
+  {
+    "id": "signal_generator",
+    "name": "Signal Generator",
+    "category": "Data & enterprise",
+    "protocol": "LOCAL SIGNALS",
+    "status": "planned",
+    "number": 104
   },
   {
     "id": "simatic505_ethernet",
     "name": "Simatic / TI 505 Ethernet",
-    "number": 88,
+    "number": 105,
     "category": "PLCs & controllers",
     "protocol": "TCP + UDP",
-    "status": "skeleton"
+    "status": "implemented"
   },
   {
     "id": "ethertrak",
     "name": "SIXNET EtherTRAK",
-    "number": 89,
+    "number": 106,
     "category": "Building & infrastructure",
     "protocol": "UDP / ETHERNET",
     "status": "implemented"
@@ -714,18 +850,18 @@ const DRIVERS = [
   {
     "id": "sixnet_udr",
     "name": "SIXNET UDR Ethernet",
-    "number": 90,
+    "number": 107,
     "category": "Building & infrastructure",
     "protocol": "UDP / ETHERNET",
-    "status": "skeleton"
+    "status": "implemented"
   },
   {
     "id": "snmp",
     "name": "SNMP",
-    "number": 91,
+    "number": 108,
     "category": "Building & infrastructure",
     "protocol": "SNMP / UDP",
-    "status": "skeleton"
+    "status": "implemented"
   },
   {
     "id": "sparkplug_b",
@@ -733,15 +869,15 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "SPARKPLUG B / MQTT",
     "status": "planned",
-    "number": 92
+    "number": 109
   },
   {
     "id": "syslog",
-    "name": "Syslog",
+    "name": "Syslog Server",
     "category": "Building & infrastructure",
-    "protocol": "SYSLOG",
-    "status": "planned",
-    "number": 93
+    "protocol": "RFC5424 / RFC3164 · UDP / TCP",
+    "status": "implemented",
+    "number": 110
   },
   {
     "id": "tcp_ascii",
@@ -749,7 +885,7 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "ASCII / TCP",
     "status": "planned",
-    "number": 94
+    "number": 111
   },
   {
     "id": "tcp_ingestion",
@@ -757,15 +893,15 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "TCP LISTENER",
     "status": "planned",
-    "number": 95
+    "number": 112
   },
   {
     "id": "thermo_westronics_ethernet",
     "name": "Thermo Westronics Ethernet",
-    "number": 96,
+    "number": 113,
     "category": "Process & energy",
-    "protocol": "ETHERNET",
-    "status": "skeleton"
+    "protocol": "SV100 / SV180 · TCP",
+    "status": "implemented"
   },
   {
     "id": "timebase_websocket",
@@ -773,12 +909,12 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "WEBSOCKET",
     "status": "planned",
-    "number": 97
+    "number": 114
   },
   {
     "id": "torque_tool_ethernet",
     "name": "Torque Tool Ethernet",
-    "number": 98,
+    "number": 115,
     "category": "Process & energy",
     "protocol": "ETHERNET",
     "status": "skeleton"
@@ -786,7 +922,7 @@ const DRIVERS = [
   {
     "id": "toshiba_ethernet",
     "name": "Toshiba Ethernet",
-    "number": 99,
+    "number": 116,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET",
     "status": "skeleton"
@@ -794,7 +930,7 @@ const DRIVERS = [
   {
     "id": "toyopuc_ethernet",
     "name": "Toyopuc PC3/PC2 Ethernet",
-    "number": 100,
+    "number": 117,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET",
     "status": "skeleton"
@@ -802,7 +938,7 @@ const DRIVERS = [
   {
     "id": "triconex_ethernet",
     "name": "Triconex Ethernet",
-    "number": 101,
+    "number": 118,
     "category": "Process & energy",
     "protocol": "ETHERNET",
     "status": "skeleton"
@@ -813,12 +949,12 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "UDP LISTENER",
     "status": "planned",
-    "number": 102
+    "number": 119
   },
   {
     "id": "universal_device",
     "name": "Universal Device",
-    "number": 103,
+    "number": 120,
     "category": "Data & enterprise",
     "protocol": "ETHERNET PROFILE",
     "status": "skeleton"
@@ -826,7 +962,7 @@ const DRIVERS = [
   {
     "id": "ucon_ethernet",
     "name": "User-Configurable Ethernet",
-    "number": 104,
+    "number": 121,
     "category": "Data & enterprise",
     "protocol": "ETHERNET PROFILE",
     "status": "skeleton"
@@ -834,7 +970,7 @@ const DRIVERS = [
   {
     "id": "wago_ethernet",
     "name": "WAGO Ethernet",
-    "number": 105,
+    "number": 122,
     "category": "PLCs & controllers",
     "protocol": "TCP / ETHERNET",
     "status": "skeleton"
@@ -845,7 +981,7 @@ const DRIVERS = [
     "category": "Process & energy",
     "protocol": "SMARTPAC / TCP",
     "status": "planned",
-    "number": 106
+    "number": 123
   },
   {
     "id": "xml_web_scraper",
@@ -853,15 +989,23 @@ const DRIVERS = [
     "category": "Data & enterprise",
     "protocol": "HTTP / XML",
     "status": "planned",
-    "number": 107
+    "number": 124
   },
   {
     "id": "yaskawa_mp_ethernet",
     "name": "Yaskawa MP Series Ethernet",
-    "number": 108,
+    "number": 125,
     "category": "PLCs & controllers",
-    "protocol": "TCP / ETHERNET",
+    "protocol": "MEMOBUS / MODBUS TCP",
     "status": "skeleton"
+  },
+  {
+    "id": "yaskawa_mp2300_cip",
+    "name": "Yaskawa MP2300 EtherNet/IP",
+    "category": "Motion & drives",
+    "protocol": "EDS INPUT ONLY / SIX RAW BYTES",
+    "status": "implemented",
+    "number": 126
   },
   {
     "id": "yaskawa_robot_hses",
@@ -869,12 +1013,12 @@ const DRIVERS = [
     "category": "CNCs & robots",
     "protocol": "HIGH SPEED ETHERNET SERVER",
     "status": "planned",
-    "number": 109
+    "number": 127
   },
   {
     "id": "yokogawa_cx",
     "name": "Yokogawa CX",
-    "number": 110,
+    "number": 128,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "skeleton"
@@ -882,7 +1026,7 @@ const DRIVERS = [
   {
     "id": "yokogawa_darwin",
     "name": "Yokogawa Darwin Ethernet",
-    "number": 111,
+    "number": 129,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "skeleton"
@@ -890,7 +1034,7 @@ const DRIVERS = [
   {
     "id": "yokogawa_dx",
     "name": "Yokogawa DX Ethernet",
-    "number": 112,
+    "number": 130,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "skeleton"
@@ -898,7 +1042,7 @@ const DRIVERS = [
   {
     "id": "yokogawa_dxp",
     "name": "Yokogawa DXP",
-    "number": 113,
+    "number": 131,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "skeleton"
@@ -907,14 +1051,14 @@ const DRIVERS = [
     "id": "yokogawa_fam3",
     "name": "Yokogawa FA-M3 Ethernet",
     "category": "PLCs & controllers",
-    "protocol": "FA-M3 / ETHERNET",
-    "status": "planned",
-    "number": 114
+    "protocol": "COMPUTER LINK / TCP",
+    "status": "implemented",
+    "number": 132
   },
   {
     "id": "yokogawa_gx",
     "name": "Yokogawa GX Ethernet",
-    "number": 115,
+    "number": 133,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "skeleton"
@@ -922,7 +1066,7 @@ const DRIVERS = [
   {
     "id": "yokogawa_mw",
     "name": "Yokogawa MW",
-    "number": 116,
+    "number": 134,
     "category": "Process & energy",
     "protocol": "ETHERNET",
     "status": "skeleton"
@@ -930,7 +1074,7 @@ const DRIVERS = [
   {
     "id": "yokogawa_mx",
     "name": "Yokogawa MX",
-    "number": 117,
+    "number": 135,
     "category": "Process & energy",
     "protocol": "TCP / ETHERNET",
     "status": "skeleton"
