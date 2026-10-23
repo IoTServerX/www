@@ -1,5 +1,14 @@
 # IoT Server website
 
+October 23, 2026: active driver availability was checked against the current
+read-only executable catalog. Torque Tool, Toshiba, Toyopuc, Triconex, Universal
+Device, WAGO, Yaskawa MP Series and Yokogawa CX/Darwin/DX/DXP/GX/MW/MX now have
+implemented cards with their specific network protocols. The public total remains
+135 families; grouped runtime identities account for the 101 implemented cards.
+CAN Raw and HID Device remain planned, as do the other existing planned families.
+This describes current source implementations, not universal feature coverage
+or a claim that every driver is in the latest downloadable release.
+
 October 22, 2026: the ControlLogix catalog card is now named
 Allen-Bradley ControlLogix Ethernet. Its stable driver identity, supported
 runtime subset and availability are unchanged. The catalog cache version changed.
@@ -15,9 +24,10 @@ as supported configuration preparation/preview/Save; operator Apply and Start
 remain distinct. Metadata and social descriptions use the same positioning.
 
 The searchable catalog in catalog.js contains 135 driver/source families:
-87 implemented runtimes, 14 unavailable skeletons and 34 planned families.
+101 implemented families and 34 planned families; no unavailable skeleton cards remain.
 The 106 Rust acquisition identities were reconciled to the current source and
-read-only executable catalog on October 21, 2026. Existing planned DIME families
+read-only executable catalog on October 23, 2026 (104 available runtimes,
+2 unavailable local sources and 252 models). Existing planned DIME families
 are retained. Reviewed Litmus network and local sources are grouped by family; registration
 aliases and distinct profiles share a card when appropriate.
 Serial-only drivers and the TCP-to-local-RTU gateway are excluded. RTU framing
@@ -40,7 +50,7 @@ and older Brother record layouts remain outside this implementation.
 
 Thirty-two additional Litmus-derived acquisition profiles have bounded Rust core,
 production host, native editor and typed-authoring verification. The compiled
-catalog reports 106 acquisition identities, 89 available runtimes and 184 models.
+catalog reports 106 acquisition identities, 104 available runtimes and 252 models.
 The website consolidates the two S5 profiles, both PROFINET policies and the two
 OSI lifecycles by family. Supported subsets and physical-device qualification
 remain separate.
