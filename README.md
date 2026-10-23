@@ -1,5 +1,9 @@
 # IoT Server website
 
+October 22, 2026: the ControlLogix catalog card is now named
+Allen-Bradley ControlLogix Ethernet. Its stable driver identity, supported
+runtime subset and availability are unchanged. The catalog cache version changed.
+
 Public landing page at https://iotserverx.com/, published with GitHub Pages
 from the root of the main branch. Static HTML, CSS, and JavaScript; no build
 or package installation is needed. Application source remains private.
@@ -11,7 +15,7 @@ as supported configuration preparation/preview/Save; operator Apply and Start
 remain distinct. Metadata and social descriptions use the same positioning.
 
 The searchable catalog in catalog.js contains 135 driver/source families:
-86 implemented runtimes, 15 unavailable skeletons and 34 planned families.
+87 implemented runtimes, 14 unavailable skeletons and 34 planned families.
 The 106 Rust acquisition identities were reconciled to the current source and
 read-only executable catalog on October 21, 2026. Existing planned DIME families
 are retained. Reviewed Litmus network and local sources are grouped by family; registration
@@ -61,6 +65,33 @@ Excel reads cached cells or formula text. Scale and Generic Device expose
 explicit bounded raw TCP Poll templates. SEW reads raw MOVILINK parameters;
 Sinumerik 808D preserves its native IEC counter/timer layouts.
 Thermo availability was reconciled with its existing SV100/SV180 runtime.
+
+October 21, 2026: MQTT Client keeps read-only JSON subscriptions by default.
+Optional tag publishing requires an explicit connection opt-in, device write
+permission and Read/Write signal access. Each signal has an independent exact
+publication topic, QoS 0/1/2 and retain setting. Written scalar values publish as
+text; publishing does not replace the subscribed value or merge a JSON property.
+QoS 0 success means the socket accepted the packet, QoS 1 means broker PUBACK,
+and QoS 2 means the broker handshake completed. These results do not establish
+downstream processing or machine execution. Retain asks the broker to keep the
+payload for future subscribers; a retained empty String clears that retained
+value. Local ingress cannot publish.
+
+October 21, 2026: Custom Protocol (the User-Configurable Ethernet identity)
+implements a TCP client driven by an explicit version 1 profile. Profiles define
+fixed, delimiter or length-prefix framing, typed fields, read/write transactions
+and unsolicited observations. Optional Lua encode/decode hooks run in a bounded
+sandbox without operating-system or network access. The editor includes an
+explicit scale example, signal-ID/type selection and offline packet tests that
+show request bytes, decoded fields and response matching without network I/O.
+Profiles are limited to 128 KiB and 32 nesting levels; frames are at most 64 KiB.
+Lua defaults are 8 MiB, 100,000 instructions and 100 ms, and profiles may lower those
+limits. Writes default to disabled and require explicit device and signal
+permissions; a command acknowledgement does not prove physical execution.
+This implementation covers TCP client profiles only; UDP, serial, listeners and
+native-driver profile import are outside its scope. This source capability
+description does not assert availability in a downloaded release or physical
+device qualification.
 
 ## Latest downloads
 

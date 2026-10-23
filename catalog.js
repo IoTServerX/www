@@ -193,7 +193,7 @@ const DRIVERS = [
   },
   {
     "id": "controllogix_ethernet",
-    "name": "ControlLogix Ethernet",
+    "name": "Allen-Bradley ControlLogix Ethernet",
     "number": 25,
     "category": "PLCs & controllers",
     "protocol": "ETHERNET/IP / CIP",
@@ -532,7 +532,7 @@ const DRIVERS = [
     "name": "MQTT Client",
     "number": 67,
     "category": "Data & enterprise",
-    "protocol": "MQTT / JSON SUBSCRIPTIONS",
+    "protocol": "MQTT / JSON SUBSCRIPTIONS + OPTIONAL TAG PUBLISHING",
     "status": "implemented"
   },
   {
@@ -572,7 +572,7 @@ const DRIVERS = [
     "name": "Omron FINS Ethernet",
     "number": 72,
     "category": "PLCs & controllers",
-    "protocol": "FINS / UDP",
+    "protocol": "FINS / UDP / TCP",
     "status": "implemented"
   },
   {
@@ -961,11 +961,11 @@ const DRIVERS = [
   },
   {
     "id": "ucon_ethernet",
-    "name": "User-Configurable Ethernet",
+    "name": "Custom Protocol",
     "number": 121,
     "category": "Data & enterprise",
-    "protocol": "ETHERNET PROFILE",
-    "status": "skeleton"
+    "protocol": "TCP CLIENT / TYPED PROFILES + BOUNDED LUA",
+    "status": "implemented"
   },
   {
     "id": "wago_ethernet",
