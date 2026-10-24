@@ -189,8 +189,3 @@ Yaskawa Robot now implements read-only High Speed Ethernet Server UDP10040
 status/running, Cartesian and pulse positions, position error, torque, latest
 alarm and executing job signals with UI/MCP configuration. SDK3.0.1 managed
 binary review and software peer tests are separate from physical qualification.
-
-Yaskawa Robot now implements read-only High Speed Ethernet Server UDP10040
-status/running, Cartesian and pulse positions, position error, torque, latest
-alarm and executing job signals with UI/MCP configuration. SDK3.0.1 managed
-binary review and software peer tests are separate from physical qualification.
