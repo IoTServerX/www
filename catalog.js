@@ -1011,8 +1011,8 @@ const DRIVERS = [
     "id": "yaskawa_robot_hses",
     "name": "Yaskawa Robot",
     "category": "CNCs & robots",
-    "protocol": "READ-ONLY HSES / UDP",
-    "status": "implemented",
+    "protocol": "HIGH SPEED ETHERNET SERVER",
+    "status": "planned",
     "number": 127
   },
   {
