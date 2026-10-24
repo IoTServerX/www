@@ -4,7 +4,7 @@ October 24, 2026: active driver availability was checked against the current
 read-only executable catalog. Torque Tool, Toshiba, Toyopuc, Triconex, Universal
 Device, WAGO, Yaskawa MP Series and Yokogawa CX/Darwin/DX/DXP/GX/MW/MX now have
 implemented cards with their specific network protocols. The public total remains
-135 families; grouped runtime identities account for the 102 implemented cards.
+135 families; grouped runtime identities account for the 103 implemented cards.
 CAN Raw and HID Device remain planned, as do the other existing planned families.
 This describes current source implementations, not universal feature coverage
 or a claim that every driver is in the latest downloadable release.
@@ -24,10 +24,10 @@ as supported configuration preparation/preview/Save; operator Apply and Start
 remain distinct. Metadata and social descriptions use the same positioning.
 
 The searchable catalog in catalog.js contains 135 driver/source families:
-102 implemented families and 33 planned families; no unavailable skeleton cards remain.
-The 107 Rust acquisition identities were reconciled to the current source and
-read-only executable catalog on October 24, 2026 (105 available runtimes,
-2 unavailable local sources and 253 models). FANUC Robot now has a read-only
+103 implemented families and 32 planned families; no unavailable skeleton cards remain.
+The 108 Rust acquisition identities were reconciled to the current source and
+read-only executable catalog on October 24, 2026 (106 available runtimes,
+2 unavailable local sources and 254 models). FANUC Robot now has a read-only
 SNPX TCP implementation for scalar I/O, registers, variables and positions,
 with UI/MCP configuration. SDK 7.1.0 analysis and software tests do not establish
 physical robot qualification or inclusion in a downloadable release. Existing planned DIME families
@@ -53,7 +53,7 @@ and older Brother record layouts remain outside this implementation.
 
 Thirty-two additional Litmus-derived acquisition profiles have bounded Rust core,
 production host, native editor and typed-authoring verification. The compiled
-catalog reports 107 acquisition identities, 105 available runtimes and 253 models.
+catalog reports 108 acquisition identities, 106 available runtimes and 254 models.
 The website consolidates the two S5 profiles, both PROFINET policies and the two
 OSI lifecycles by family. Supported subsets and physical-device qualification
 remain separate.
@@ -184,3 +184,8 @@ Labeled arrows distinguish incoming signals, outgoing publications and bidirecti
 commands/feedback. Desktop uses three external-system columns; mobile stacks them.
 It is semantic HTML with decorative inline SVG icons and CSS connectors; no image,
 external icon dependency, animation or additional JavaScript is required.
+
+Yaskawa Robot now implements read-only High Speed Ethernet Server UDP10040
+status/running, Cartesian and pulse positions, position error, torque, latest
+alarm and executing job signals with UI/MCP configuration. SDK3.0.1 managed
+binary review and software peer tests are separate from physical qualification.
