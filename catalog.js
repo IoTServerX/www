@@ -297,10 +297,10 @@ const DRIVERS = [
   },
   {
     "id": "fanuc_robot_snpx",
-    "name": "Fanuc Robot SNPX",
+    "name": "FANUC Robot",
     "category": "CNCs & robots",
-    "protocol": "SNPX",
-    "status": "planned",
+    "protocol": "READ-ONLY SNPX / TCP",
+    "status": "implemented",
     "number": 38
   },
   {
@@ -1011,8 +1011,8 @@ const DRIVERS = [
     "id": "yaskawa_robot_hses",
     "name": "Yaskawa Robot",
     "category": "CNCs & robots",
-    "protocol": "HIGH SPEED ETHERNET SERVER",
-    "status": "planned",
+    "protocol": "READ-ONLY HSES / UDP",
+    "status": "implemented",
     "number": 127
   },
   {
